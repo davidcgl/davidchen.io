@@ -1,13 +1,14 @@
-$slate01: #d2dae2;
-$slate02: #808e9b;
-$slate03: #485460;
-$slate04: #1e272e;
+$slate01: #d1dae1;
+$slate02: #93a8b9;
+$slate03: #5b768b;
+$slate04: #32414d;
+$slate05: #0a0d0f;
 $red01: #ef5777;
 $red02: #f53b57;
 $green01: #0be881;
 $green02: #05c46b;
-$blue01: #4bcffa;
-$blue02: #0fbcf9;
+$blue01: #4b7bec;
+$blue02: #3867d6;
 $violet01: #575fcf;
 $violet02: #3c40c6;
 $yellow01: #ffdd59;
@@ -20,6 +21,7 @@ $font-size: 1.6rem;
 $font-stack-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
   'Helvetica Neue', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
 $font-stack-inter: Inter, #{$font-stack-fallback};
+$font-stack-inter-var: #{$font-stack-fallback};
 $font-stack-inter-var: 'Inter var', #{$font-stack-fallback};
 $font-stack-mono: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
 

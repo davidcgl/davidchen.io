@@ -10,9 +10,11 @@ specimen book.
 
 ## Typography
 
-This is a [link text](https://davidchen.io).
+This is a [link](https://davidchen.io).
 
 This is a [link with title](https://davidchen.io 'title text!').
+
+This is a `linkify` link: https://davidchen.io
 
 "double quotes" and 'single quotes'
 

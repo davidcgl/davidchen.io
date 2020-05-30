@@ -7,13 +7,17 @@
   @return ($rem / 1rem) * 10px;
 }
 
+::selection {
+  background: rgba($yellow01, 0.5);
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
-  color: $slate04;
+  color: $slate05;
   font-size: $font-size;
   font-family: $font-stack-inter;
   font-weight: normal;
@@ -35,15 +39,13 @@ h6 {
 }
 
 a {
-  color: $slate04;
-  box-shadow: inset 0 -0.4em 0 rgba($violet02, 0.2);
-  text-decoration: none;
+  color: $violet02;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: $slate04;
-  box-shadow: inset 0 -0.4em 0 rgba($green02, 0.2);
-  text-decoration: none;
+  color: $green02;
+  text-decoration: underline;
 }
 
 em,
@@ -57,7 +59,7 @@ ol {
 }
 
 blockquote {
-  color: $slate02;
+  color: $slate03;
   margin: ($font-size * 2) 0;
   padding: 0 ($font-size * 2);
 }
@@ -124,7 +126,7 @@ hr {
       a {
         display: block;
         position: relative;
-        background: $slate04;
+        background: $slate05;
         width: $font-size * 5;
         height: $font-size * 6;
       }
@@ -143,7 +145,7 @@ hr {
 
     nav {
       flex: 1 1 auto;
-      border-bottom: ($font-size * 0.5) solid $slate04;
+      border-bottom: ($font-size * 0.5) solid $slate05;
 
       ul {
         display: flex;
@@ -161,14 +163,14 @@ hr {
       }
 
       a {
-        color: $slate02;
+        color: $slate03;
         display: block;
         position: absolute;
         right: 0;
         bottom: $font-size * 0.5;
 
         &:hover {
-          color: $slate04;
+          color: $slate05;
         }
       }
     }
@@ -177,10 +179,22 @@ hr {
 
 .post-title {
   margin: 0;
+
+  a {
+    color: $slate05;
+    box-shadow: inset 0 -0.4em 0 rgba($violet02, 0.2);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $slate05;
+    box-shadow: inset 0 -0.4em 0 rgba($green01, 0.2);
+    text-decoration: none;
+  }
 }
 
 .post-date {
-  color: $slate02;
+  color: $slate03;
 }
 
 .post-list {

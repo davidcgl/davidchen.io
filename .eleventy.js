@@ -4,9 +4,16 @@ module.exports = (config) => {
   const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
   config.addPlugin(syntaxHighlight);
 
+  const markdownIt = require('markdown-it')({
+    html: true,
+    linkify: true,
+    typographer: true,
+  });
+  config.setLibrary('md', markdownIt);
+
   const htmlmin = require('html-minifier');
   config.addTransform('htmlmin', (content, outputPath) => {
-    if (outputPath.endsWith('.html')) {
+    if (outputPath && outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
         collapseBooleanAttributes: true,
         collapseWhitespace: true,
@@ -27,8 +34,19 @@ module.exports = (config) => {
   config.addPassthroughCopy(paths.siteAssetsDir);
   config.addPassthroughCopy(`${paths.siteDir}/favicon.ico`);
 
-  config.addCollection('post', (collection) => {
-    return collection.getFilteredByGlob(`${paths.siteDir}/posts/*.md`);
+  config.addCollection('posts', (collection) => {
+    const now = new Date();
+    const isLive = (post) => post.date <= now;
+    return collection
+      .getFilteredByGlob(`${paths.siteDir}/posts/*.md`)
+      .filter(isLive)
+      .reverse();
+  });
+
+  config.addCollection('drafts', (collection) => {
+    return [
+      ...collection.getFilteredByGlob(`${paths.siteDir}/drafts/*.md`),
+    ].reverse();
   });
 
   return {
