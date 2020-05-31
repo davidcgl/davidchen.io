@@ -376,15 +376,9 @@ template {
   src: url("/assets/fonts/Inter-Bold.woff2") format("woff2"), url("/assets/fonts/Inter-Bold.woff") format("woff");
 }
 
-/**
- * Dracula Theme originally by Zeno Rocha [@zenorocha]
- * https://draculatheme.com/
- *
- * Ported for PrismJS by Albert Vallverdu [@byverdu]
- */
 :not(pre) > code {
   font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  background: rgba(209, 218, 225, 0.5);
+  background: rgba(209, 218, 225, 0.2);
   border-radius: 0.2rem;
   padding: 0.2rem 0;
 }
@@ -395,7 +389,8 @@ template {
 }
 
 pre {
-  background: #282a36;
+  border: 1px solid rgba(10, 13, 15, 0.1);
+  background: rgba(209, 218, 225, 0.2);
   font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 1.36rem;
   border-radius: 0.6rem;
@@ -411,8 +406,7 @@ pre {
 }
 
 pre > code {
-  color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  color: #0a0d0f;
   font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   text-align: left;
   white-space: pre;
@@ -420,71 +414,10 @@ pre > code {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #6272a4;
-}
-
-.token.punctuation {
-  color: #f8f8f2;
-}
-
-.namespace {
-  opacity: 0.7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #ff79c6;
-}
-
-.token.boolean,
-.token.number {
-  color: #bd93f9;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #50fa7b;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-  color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-  color: #f1fa8c;
-}
-
-.token.keyword {
-  color: #8be9fd;
-}
-
-.token.regex,
-.token.important {
-  color: #ffb86c;
-}
-
-.token.important,
 .token.bold {
   font-weight: bold;
 }
@@ -493,31 +426,107 @@ pre > code {
   font-style: italic;
 }
 
+.token.doctype,
+.token.macro.property,
+.token.punctuation,
+.token.variable {
+  color: #0a0d0f;
+}
+
+.token.blockquote,
+.token.cdata,
+.token.comment {
+  color: #969896;
+}
+
+.token.builtin,
+.token.important,
+.token.interpolation-punctuation,
+.token.keyword,
+.token.operator,
+.token.rule {
+  color: #d73a49;
+}
+
+.token.attr-value,
+.token.regex,
+.token.string,
+.token.url {
+  color: #032f62;
+}
+
+.token.atrule,
+.token.boolean,
+.token.code,
+.token.command,
+.token.constant,
+.token.entity,
+.token.number,
+.token.property,
+.token.symbol {
+  color: #005cc5;
+}
+
+.token.prolog,
+.token.selector,
+.token.tag {
+  color: #22863a;
+}
+
+.token.attr-name,
+.token.class,
+.token.class-name,
+.token.function,
+.token.id,
+.token.namespace,
+.token.pseudo-class,
+.token.pseudo-element,
+.token.url-reference .token.variable {
+  color: #6f42c1;
+}
+
 .token.entity {
   cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #22863a;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #d73a49;
 }
 
 ::selection {
   background: rgba(255, 221, 89, 0.5);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
   color: #0a0d0f;
   font-size: 1.6rem;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Roboto, Ubuntu, sans-serif;
   font-weight: normal;
   line-height: 1.5;
-}
-
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-  }
 }
 
 h1,
@@ -553,7 +562,7 @@ ol {
 }
 
 blockquote {
-  color: #32414d;
+  color: rgba(10, 13, 15, 0.6);
   margin: 3.2rem 0;
   padding: 0 3.2rem;
 }
@@ -565,7 +574,7 @@ table {
 
 tr th,
 tr td {
-  border-bottom: 0.1rem solid #d1dae1;
+  border-bottom: 0.1rem solid rgba(10, 13, 15, 0.1);
   padding: 1.2rem 1.6rem;
   text-align: left;
 }
@@ -576,7 +585,7 @@ tr td:first-child {
 }
 
 tr th {
-  border-top: 0.1rem solid #d1dae1;
+  border-top: 0.1rem solid rgba(10, 13, 15, 0.1);
 }
 
 img {
@@ -587,39 +596,37 @@ img {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 0.1rem solid #d1dae1;
+  border-bottom: 0.1rem solid rgba(10, 13, 15, 0.1);
 }
 
-.container {
-  padding: 0 2.4rem;
-}
-
-.container .row {
-  width: 100%;
+.row {
   max-width: 64rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
   margin: 0 auto;
 }
 
-.container > main {
-  padding: 4.8rem 0;
+body > main {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
-.container > header {
+body > header {
   display: flex;
 }
 
-.container > header a,
-.container > header a:hover {
+body > header a,
+body > header a:hover {
   text-decoration: none;
   border-bottom: none;
 }
 
-.container > header h1 {
+body > header h1 {
   line-height: 1;
   margin: 0;
 }
 
-.container > header h1 a {
+body > header h1 a {
   display: block;
   position: relative;
   background: #0a0d0f;
@@ -627,7 +634,7 @@ hr {
   height: 9.6rem;
 }
 
-.container > header h1 .logo {
+body > header h1 .logo {
   color: #fff;
   font-size: 3.2rem;
   font-weight: bold;
@@ -638,11 +645,11 @@ hr {
   height: 3.2rem;
 }
 
-.container > header nav {
+body > header nav {
   flex: 1 1 auto;
 }
 
-.container > header nav ul {
+body > header nav ul {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -651,42 +658,28 @@ hr {
   margin: 0;
 }
 
-.container > header nav li {
+body > header nav li {
   position: relative;
   width: 8rem;
   height: 9.6rem;
 }
 
-.container > header nav a {
-  color: rgba(10, 13, 15, 0.6);
+body > header nav a {
+  color: rgba(10, 13, 15, 0.5);
   display: block;
   position: absolute;
   right: 0;
   bottom: 0.7rem;
 }
 
-.container > header nav a:hover {
+body > header nav a:hover {
   color: #0a0d0f;
   border-bottom: solid 0.1em #3867d6;
   margin-bottom: -0.1em;
 }
 
-.post-title {
-  margin: 0;
-}
-
-.post-title a {
-  color: #0a0d0f;
-  text-decoration: none;
-}
-
-.post-title a:hover {
-  color: #0a0d0f;
-  text-decoration: none;
-}
-
 .post-date {
-  color: rgba(10, 13, 15, 0.6);
+  color: rgba(10, 13, 15, 0.5);
 }
 
 .post-list {
@@ -695,10 +688,33 @@ hr {
   margin: 0;
 }
 
+.post-list .post-title {
+  margin: 0;
+}
+
+.post-list .post-title a {
+  color: #0a0d0f;
+  box-shadow: inset 0 -0.4em 0 rgba(60, 64, 198, 0.2);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.post-list .post-title a:hover {
+  color: #0a0d0f;
+  box-shadow: inset 0 -0.4em 0 rgba(60, 64, 198, 0.4);
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .post-list li {
   padding: 0 0 2em 0;
 }
 
+.post .post-title {
+  font-size: 3em;
+  margin: 0;
+}
+
 .post .post-date {
-  padding: 0 0 2.4rem 0;
+  padding: 0 0 2.4em 0;
 }

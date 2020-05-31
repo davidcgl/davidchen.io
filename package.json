@@ -20,7 +20,7 @@
     "clean": "run-p clean:*",
     "clean:eleventy": "rm -rf dist",
     "clean:gulp": "gulp clean",
-    "format": "prettier --write --ignore-path src/site/_data/assets.json *.js src/**/*{css,html,js,json,md}",
+    "format": "prettier --write *.js src/**/*{css,js,json,md}",
     "watch": "run-s build:gulp && run-p watch:*",
     "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
     "watch:gulp": "gulp watch"
