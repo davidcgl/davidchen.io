@@ -23,10 +23,6 @@ pre {
   padding: $font-size;
   margin: $font-size 0;
   overflow: scroll;
-
-  @media only screen and (max-width: remToPx($page-width + ($page-gutter * 2))) {
-    border-radius: 0;
-  }
 }
 
 pre > code {
