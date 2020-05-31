@@ -62,23 +62,27 @@ blockquote {
 
 table {
   border-spacing: 0;
+  border: 1px solid $grey01;
+  border-radius: 0.6rem;
   width: 100%;
 }
 
 tr {
-  th,
-  td {
-    border-bottom: 0.1rem solid $grey01;
-    padding: 1.2rem $font-size;
+  th {
+    background: rgba($slate01, 0.2);
     text-align: left;
-
-    &:first-child {
-      padding-left: 0;
-    }
+    border-bottom: 1px solid $grey01;
+    padding: $font-size;
   }
 
-  th {
-    border-top: 0.1rem solid $grey01;
+  td {
+    text-align: left;
+    border-bottom: 1px solid $grey01;
+    padding: ($font-size * 0.5) $font-size;
+  }
+
+  &:last-child td {
+    border-bottom: none;
   }
 }
 
