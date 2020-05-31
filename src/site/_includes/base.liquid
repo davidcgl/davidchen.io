@@ -8,10 +8,7 @@
 
     <link href="https://fonts.gstatic.com/" rel="dns-prefetch" />
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     {% if globals.environment == "production" %}
       <link href="/assets/css/{{ assets['main.min.css'] }}" rel="stylesheet" />
@@ -23,33 +20,25 @@
   </head>
 
   <body>
-    <header class="row">
-      <h1>
-        <a href="/">
-          <div class="logo">dc.</div>
-        </a>
-      </h1>
-      <nav>
-        <ul>
-          {% if globals.environment == "development" %}
-          <li>
-            <a href="/drafts">drafts</a>
-          </li>
-          {% endif %}
-          <li>
-            <a href="/about">about</a>
-          </li>
-          <li>
-            <a href="https://github.com/davidcgl">github</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/davidcgl">linkedin</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="row">
-      {{ content }}
-    </main>
+
+    <div class="page">
+      <header class="row">
+        <h1>
+          <a href="/">
+            <div class="logo">dc.</div>
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/about">about</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="row">
+        {{ content }}
+      </main>
+    </div>
   </body>
 </html>
