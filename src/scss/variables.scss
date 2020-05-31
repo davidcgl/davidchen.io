@@ -3,11 +3,18 @@ $slate02: #93a8b9;
 $slate03: #5b768b;
 $slate04: #32414d;
 $slate05: #0a0d0f;
-$grey01: rgba($slate05, 0.3);
-$grey02: rgba($slate05, 0.6);
+$grey01: rgba($slate05, 0.1);
+$grey02: rgba($slate05, 0.2);
+$grey03: rgba($slate05, 0.3);
+$grey04: rgba($slate05, 0.4);
+$grey05: rgba($slate05, 0.5);
+$grey06: rgba($slate05, 0.6);
+$grey07: rgba($slate05, 0.7);
+$grey08: rgba($slate05, 0.8);
+$grey09: rgba($slate05, 0.9);
 $red01: #ef5777;
-$red02: #f53b57;
-$green01: #0be881;
+$blue01: #4b7bec;
+$blue02: #3867d6;
 $green02: #05c46b;
 $blue01: #4b7bec;
 $blue02: #3867d6;
@@ -19,13 +26,9 @@ $orange01: #ffc048;
 $orange02: #ffa801;
 
 $font-size: 1.6rem;
-
-$font-stack-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  'Helvetica Neue', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-$font-stack-inter: Inter, #{$font-stack-fallback};
-$font-stack-inter-var: #{$font-stack-fallback};
-$font-stack-inter-var: 'Inter var', #{$font-stack-fallback};
-$font-stack-mono: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
-
 $page-width: $font-size * 40;
-$page-gutter: $font-size * 1.5;
+$page-gutter: 2rem;
+
+$font-stack: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Helvetica Neue', Roboto, Ubuntu, sans-serif;
+$font-stack-mono: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;

@@ -1,31 +1,25 @@
 @import 'normalize';
-@import 'inter';
-@import 'dracula';
+@import 'prism';
 @import 'variables';
-
-@function remToPx($rem) {
-  @return ($rem / 1rem) * 10px;
-}
 
 ::selection {
   background: rgba($yellow01, 0.5);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
   color: $slate05;
   font-size: $font-size;
-  font-family: $font-stack-inter;
+  font-family: $font-stack;
   font-weight: normal;
   line-height: 1.5;
-
-  @supports (font-variation-settings: normal) {
-    font-family: $font-stack-inter-var;
-  }
 }
 
 h1,
@@ -46,7 +40,7 @@ a {
   &:hover {
     color: $slate05;
     text-decoration: none;
-    border-bottom: solid 0.1em rgba($blue02, 1);
+    border-bottom: solid 0.1em $blue02;
   }
 }
 
@@ -61,30 +55,34 @@ ol {
 }
 
 blockquote {
-  color: $slate04;
+  color: $grey06;
   margin: ($font-size * 2) 0;
   padding: 0 ($font-size * 2);
 }
 
 table {
   border-spacing: 0;
+  border: 1px solid $grey01;
+  border-radius: 0.6rem;
   width: 100%;
 }
 
 tr {
-  th,
-  td {
-    border-bottom: 0.1rem solid $slate01;
-    padding: ($font-size * 0.75) $font-size;
+  th {
+    background: rgba($slate01, 0.2);
     text-align: left;
-
-    &:first-child {
-      padding-left: 0;
-    }
+    border-bottom: 1px solid $grey01;
+    padding: $font-size;
   }
 
-  th {
-    border-top: 0.1rem solid $slate01;
+  td {
+    text-align: left;
+    border-bottom: 1px solid $grey01;
+    padding: ($font-size * 0.5) $font-size;
+  }
+
+  &:last-child td {
+    border-bottom: none;
   }
 }
 
@@ -96,110 +94,95 @@ img {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 0.1rem solid $slate01;
+  border-bottom: 0.1rem solid $grey01;
 }
 
-.container {
-  padding: 0 $page-gutter;
+.row {
+  max-width: $page-width;
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+  margin: 0 auto;
+}
 
-  .row {
-    width: 100%;
-    max-width: $page-width;
-    margin: 0 auto;
-  }
+body > main {
+  padding-top: $font-size * 5;
+  padding-bottom: $font-size * 5;
+}
 
-  > main {
-    padding: ($font-size * 3) 0;
-  }
+body > header {
+  display: flex;
 
-  > header {
-    display: flex;
+  h1 {
+    line-height: 1;
+    margin: 0;
 
-    a,
-    a:hover {
-      text-decoration: none;
+    a {
+      display: block;
+      background: $slate05;
       border-bottom: none;
+      position: relative;
+      width: $font-size * 5;
+      height: $font-size * 6;
+
+      &:hover {
+        border-bottom: none;
+      }
     }
 
-    h1 {
-      line-height: 1;
+    .logo {
+      color: #fff;
+      font-size: $font-size * 2;
+      font-weight: bold;
+      position: absolute;
+      right: 0.8rem;
+      bottom: 0.8rem;
+      width: $font-size * 3;
+      height: $font-size * 2;
+    }
+  }
+
+  nav {
+    flex: 1 1 auto;
+
+    ul {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      list-style: none;
+      padding: 0;
       margin: 0;
-
-      a {
-        display: block;
-        position: relative;
-        background: $slate05;
-        width: $font-size * 5;
-        height: $font-size * 6;
-      }
-
-      .logo {
-        color: #fff;
-        font-size: $font-size * 2;
-        font-weight: bold;
-        position: absolute;
-        right: 0.8rem;
-        bottom: 0.8rem;
-        width: $font-size * 3;
-        height: $font-size * 2;
-      }
     }
 
-    nav {
-      flex: 1 1 auto;
+    li {
+      position: relative;
+      width: $font-size * 5;
+      height: $font-size * 6;
+    }
 
-      ul {
-        display: flex;
-        align-items: stretch;
-        justify-content: flex-start;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+    a {
+      display: block;
+      color: $grey05;
+      border-bottom: none;
+      position: absolute;
+      right: 0;
+      bottom: 0.7rem;
 
-      li {
-        position: relative;
-        width: $font-size * 5;
-        height: $font-size * 6;
-      }
-
-      a {
-        color: $grey02;
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0.7rem;
-
-        &:hover {
-          color: $slate05;
-          border-bottom: solid 0.1em rgba($blue02, 1);
-          margin-bottom: -0.1em;
-        }
+      &:hover {
+        color: $slate05;
+        border-bottom: solid 0.1em rgba($blue02, 1);
+        margin-bottom: -0.1em;
       }
     }
   }
 }
 
+.page-title,
 .post-title {
   margin: 0;
-
-  a {
-    color: $slate05;
-    // box-shadow: inset 0 -0.4em 0 rgba($violet02, 0.2);
-    text-decoration: none;
-    // border-bottom: none;
-  }
-
-  a:hover {
-    color: $slate05;
-    // box-shadow: inset 0 -0.4em 0 rgba($violet02, 0.4);
-    text-decoration: none;
-    // border-bottom: none;
-  }
 }
 
 .post-date {
-  color: $grey02;
+  color: $grey05;
 }
 
 .post-list {
@@ -207,11 +190,32 @@ hr {
   padding: 0;
   margin: 0;
 
+  a {
+    color: $slate05;
+    box-shadow: inset 0 -0.4em 0 rgba($blue02, 0.4);
+    text-decoration: none;
+    border-bottom: none;
+
+    &:hover {
+      color: $slate05;
+      box-shadow: inset 0 -0.4em 0 rgba($blue02, 0.6);
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+
   li {
     padding: 0 0 2em 0;
   }
 }
 
-.post .post-date {
-  padding: 0 0 2.4rem 0;
+.post {
+  .post-title {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .post-date {
+    padding: 0 0 2.4em 0;
+  }
 }
