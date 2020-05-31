@@ -13,7 +13,9 @@
   },
   "scripts": {
     "build": "run-s build:gulp build:eleventy",
+    "build:dev": "run-s build:gulp build:eleventy:dev",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build:eleventy:dev": "ELEVENTY_ENV=development eleventy",
     "build:gulp": "gulp build",
     "clean": "run-p clean:*",
     "clean:eleventy": "rm -rf dist",
