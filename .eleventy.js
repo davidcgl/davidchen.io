@@ -49,6 +49,10 @@ module.exports = (config) => {
     ].reverse();
   });
 
+  config.addLiquidFilter('filter_by_year', (collection, year) =>
+    collection.filter((item) => item.date.getFullYear() == year)
+  );
+
   return {
     dir: { input: paths.siteDir, output: 'dist' },
     templateFormats: ['html', 'md', 'liquid'],

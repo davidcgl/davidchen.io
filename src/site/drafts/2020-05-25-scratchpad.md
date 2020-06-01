@@ -1,14 +1,10 @@
 ---
-title: This is a scratchpad
+title: Scratchpad
 ---
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 
 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
 when an unknown printer took a galley of type and scrambled it to make a type
 specimen book.
-
-## Typography
 
 This is a [link](https://davidchen.io).
 
@@ -20,21 +16,9 @@ This is a `linkify` link: https://davidchen.io
 
 # h1 Heading
 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type
-specimen book.
-
 ## h2 Heading
 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type
-specimen book.
-
 ### h3 Heading
-
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type
-specimen book.
 
 #### h4 Heading
 
@@ -42,11 +26,8 @@ specimen book.
 
 ###### h6 Heading
 
-**This is bold text**
 
 **This is bold text**
-
-_This is italic text_
 
 _This is italic text_
 
@@ -56,9 +37,7 @@ One block quote.
 
 > This is a block quote.
 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type
-specimen book.
+Another longer block quote.
 
 > All money is a matter of belief. The real tragedy of the poor is the poverty
 > of their aspirations. It is not from the benevolence of the butcher, the
@@ -79,7 +58,7 @@ Unordered
 - Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
     - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
+    - Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
 - Very easy!
 
@@ -93,15 +72,21 @@ Ordered
 
 Inline code
 
-`brew update` and `brew install python3`.
+`brew update && brew install python3`
 
-Block code
+Unstyled
 
 ```
-Sample text here...
+brew update && brew install python3
 ```
 
-Javascript / JSX
+Bash
+
+```bash
+brew update && brew install python3
+```
+
+JSX
 
 ```jsx
 // This comment is 80 columns long. This comment is 80 columns long. This commen
@@ -142,6 +127,22 @@ g = Greeter.new("world")
 g.salute
 ```
 
+Python
+
+```python
+class Greeter:
+
+  def __init__(self, name):
+      self.name = name
+
+  # This is a comment.
+  def salute
+      print(f"Hello {self.name}")
+
+g = Greeter("World")
+g.salute
+```
+
 Elixir
 
 ```elixir
@@ -166,6 +167,7 @@ defmodule Stack do
   end
 end
 ```
+
 
 ## Images
 
@@ -205,11 +207,15 @@ Right aligned columns
 
 ## Horizontal Rules
 
----
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book.
 
 ---
 
----
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book.
 
 ## Final words
 
