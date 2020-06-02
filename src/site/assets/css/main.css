@@ -570,23 +570,28 @@ hr {
 
 header {
   display: flex;
-  line-height: 1;
-  padding: 3.2rem 0 0 0;
+  justify-content: space-between;
+  height: 9.6rem;
 }
 
-header a.logo {
-  border-bottom: none;
+header .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0;
 }
 
-header a.logo:hover {
+header .logo a,
+header .logo a:hover {
   border-bottom: none;
 }
 
 header nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 
 header nav ul {
