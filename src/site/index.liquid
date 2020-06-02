@@ -4,7 +4,3 @@ title: Home
 ---
 
 {% include post_list, posts: collections.posts, year: 2020 %}
-
-{% if globals.environment == "development" %}
-  <p><a href="/drafts">View drafts</a></p>
-{% endif %}

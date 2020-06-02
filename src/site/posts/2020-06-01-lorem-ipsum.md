@@ -22,10 +22,7 @@ nisl.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel imperdiet
 leo. Morbi posuere ullamcorper libero, convallis elementum erat accumsan vel.
-Praesent mattis tincidunt ex, eu malesuada tellus lacinia et. Ut accumsan
-feugiat elit, non mattis dui pretium non. Phasellus pellentesque volutpat
-sapien, vitae pulvinar magna volutpat in. Nulla at mi non nunc auctor
-pharetra. Duis eu leo mi.
+Praesent mattis tincidunt ex, eu malesuada tellus lacinia et.
 
 ```ruby
 class Greeter
@@ -51,13 +48,11 @@ tincidunt. Integer consectetur ullamcorper est eget sollicitudin. Nunc eu
 erat at elit tempor porta at molestie risus. Duis eget quam ac ex placerat
 pretium.
 
-Mauris ornare lacinia quam, non lobortis velit vulputate non. Donec magna
+**Mauris ornare lacinia quam, non lobortis velit vulputate non**. Donec magna
 metus, venenatis in ligula euismod, rhoncus varius ligula. Sed sit amet augue
 augue. Nam venenatis viverra mauris, in tincidunt quam suscipit id.
 Suspendisse fringilla lacus vel lectus tempus, ut tincidunt dolor dapibus. In
-sit amet euismod nulla, sed venenatis turpis. Morbi varius, odio eget ornare
-faucibus, sapien lacus feugiat diam, at mollis justo odio a nisl. Curabitur
-tincidunt leo ante, fermentum condimentum nisl consectetur sed.
+sit amet euismod nulla, sed venenatis turpis.
 
 ## Final words
 
