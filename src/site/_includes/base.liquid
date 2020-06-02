@@ -23,16 +23,15 @@
 
     <div class="page">
       <header class="row">
-        <h1>
-          <a href="/">
-            <div class="logo">dc.</div>
-          </a>
-        </h1>
+        <a class="logo" href="/">
+          <img src="/assets/img/logo.svg" width="44" height="24" alt="Logo" />
+        </a>
         <nav>
           <ul>
-            <li>
-              <a href="/about">about</a>
-            </li>
+            {%- if globals.environment == "development" -%}
+              <li><a href="/drafts">drafts</a></li>
+            {%- endif -%}
+            <li><a href="/about">about</a></li>
           </ul>
         </nav>
       </header>

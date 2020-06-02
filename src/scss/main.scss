@@ -110,44 +110,26 @@ hr {
 
 header {
   display: flex;
+  line-height: 1;
+  padding: 3.2rem 0 0 0;
 
-  h1 {
-    line-height: 1;
-    margin: 0;
+  a.logo {
+    border-bottom: none;
 
-    a {
-      display: block;
-      background: $slate05;
+    &:hover {
       border-bottom: none;
-      position: relative;
-      width: $font-size * 5;
-      height: $font-size * 6;
-
-      &:hover {
-        border-bottom: none;
-      }
-    }
-
-    .logo {
-      color: #fff;
-      font-size: $font-size * 2;
-      font-weight: bold;
-      position: absolute;
-      right: 0.8rem;
-      bottom: 0.8rem;
-      width: $font-size * 3;
-      height: $font-size * 2;
     }
   }
 
   nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex: 1 1 auto;
 
     ul {
-      display: flex;
-      justify-content: flex-end;
       list-style: none;
-      padding: 6.6rem 0 0.6rem 0;
+      padding: 0;
       margin: 0;
     }
 
@@ -161,7 +143,6 @@ header {
       color: $grey04;
       font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 0.1rem;
       border-bottom: none;
 
       &:hover {
