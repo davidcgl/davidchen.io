@@ -26,7 +26,6 @@ This is a `linkify` link: https://davidchen.io
 
 ###### h6 Heading
 
-
 **This is bold text**
 
 _This is italic text_
@@ -170,7 +169,6 @@ defmodule Stack do
 end
 ```
 
-
 ## Images
 
 This is an image.
@@ -193,19 +191,31 @@ This is an image with footnote style reference link.
 
 ## Tables
 
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book.
+
+| Option | Description                                |
+| ------ | ------------------------------------------ |
+| data   | path to data files                         |
+| engine | engine to be used for processing templates |
+| ext    | extension to be used for dest files        |
+
+Long lines.
+
+| Option | Description                                                                   |
+| ------ | ----------------------------------------------------------------------------- |
+| data   | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. |
+| engine | When an unknown printer took a galley of type and scrambled it to make a      |
+| ext    | extension to be used for dest files.                                          |
 
 Right aligned columns
 
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+| Option |                                Description |
+| -----: | -----------------------------------------: |
+|   data |                         path to data files |
+| engine | engine to be used for processing templates |
+|    ext |        extension to be used for dest files |
 
 ## Horizontal Rules
 
