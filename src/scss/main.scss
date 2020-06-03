@@ -22,14 +22,29 @@ body {
   line-height: 1.5;
 }
 
-h1,
+
+h1 {
+  font-size: $font-size * 2.5;
+  line-height: 1.25;
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: $font-size * 1.5;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: $font-size * 1.25;
+  line-height: 1.25;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 3.2rem;
-  margin-bottom: 0.8rem;
+  margin: 1.5em 0 0.5em;
 }
 
 a {
@@ -110,22 +125,36 @@ hr {
 
 header {
   display: flex;
-  line-height: 1;
-  padding: 3.2rem 0 0 0;
+  justify-content: space-between;
+  height: 9.6rem;
 
-  a.logo {
-    border-bottom: none;
+  * {
+    font-size: $font-size;
+  }
 
-    &:hover {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin: 0;
+
+    a,
+    a:hover {
+      display: block;
       border-bottom: none;
+    }
+
+    img {
+      display: block;
     }
   }
 
   nav {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto;
 
     ul {
       list-style: none;
@@ -169,19 +198,14 @@ main {
 
   .post-date {
     color: $grey05;
-    font-size: $font-size * 0.75;
-    margin-left: 0.4rem;
+    font-size: $font-size * 0.85;
+    margin-left: 0.5em;
   }
 }
 
 .post {
-  .post-title {
-    font-size: 4.8rem;
-    line-height: 1.2;
-    margin-bottom: 3.2rem;
-  }
-
   .post-date {
     color: $grey05;
+    margin: 2em 0 1em;
   }
 }
