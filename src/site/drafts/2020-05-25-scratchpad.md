@@ -89,6 +89,8 @@ brew update && brew install python3
 JSX
 
 ```jsx
+// This comment is 60 columns long. This comment is 60 colu
+// This comment is 70 columns long. This comment is 70 columns long.
 // This comment is 80 columns long. This comment is 80 columns long. This commen
 const GreetPerson = ({ name }) => {
   // This is a comment.
