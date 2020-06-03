@@ -128,6 +128,10 @@ header {
   justify-content: space-between;
   height: 9.6rem;
 
+  * {
+    font-size: $font-size;
+  }
+
   .logo {
     display: flex;
     flex-direction: column;
@@ -137,7 +141,12 @@ header {
 
     a,
     a:hover {
+      display: block;
       border-bottom: none;
+    }
+
+    img {
+      display: block;
     }
   }
 

@@ -588,6 +588,10 @@ header {
   height: 9.6rem;
 }
 
+header * {
+  font-size: 1.6rem;
+}
+
 header .logo {
   display: flex;
   flex-direction: column;
@@ -598,7 +602,12 @@ header .logo {
 
 header .logo a,
 header .logo a:hover {
+  display: block;
   border-bottom: none;
+}
+
+header .logo img {
+  display: block;
 }
 
 header nav {
