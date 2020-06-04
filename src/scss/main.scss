@@ -68,7 +68,7 @@ ol {
 }
 
 blockquote {
-  color: $grey05;
+  color: $grey06;
   margin: ($font-size * 2) 0;
   padding: 0 ($font-size * 2);
 }
@@ -172,7 +172,7 @@ header {
 
     a {
       display: block;
-      color: $grey04;
+      color: $grey06;
       font-weight: bold;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -200,7 +200,7 @@ main {
   }
 
   .post-date {
-    color: $grey05;
+    color: $grey06;
     font-size: $font-size * 0.85;
     margin-left: 0.5em;
   }
@@ -208,7 +208,7 @@ main {
 
 .post {
   .post-date {
-    color: $grey05;
+    color: $grey06;
     margin: 2em 0 1em;
   }
 }

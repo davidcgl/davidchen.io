@@ -48,6 +48,13 @@ tincidunt. Integer consectetur ullamcorper est eget sollicitudin. Nunc eu
 erat at elit tempor porta at molestie risus. Duis eget quam ac ex placerat
 pretium.
 
+> All money is a matter of belief. The real tragedy of the poor is the poverty
+> of their aspirations. It is not from the benevolence of the butcher, the
+> brewer, or the baker that we expect our dinner, but from their regard to
+> their own interest.
+>
+> -- Adam Smith
+
 **Mauris ornare lacinia quam, non lobortis velit vulputate non**. Donec magna
 metus, venenatis in ligula euismod, rhoncus varius ligula. Sed sit amet augue
 augue. Nam venenatis viverra mauris, in tincidunt quam suscipit id.

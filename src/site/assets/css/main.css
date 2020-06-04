@@ -339,7 +339,7 @@ template {
 
 :not(pre) > code {
   font-family: "Fira Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  background: #f6f7f8;
+  background: #f8f9fa;
   border-radius: 0.2rem;
   padding: 0.2em 0;
 }
@@ -351,7 +351,7 @@ template {
 
 pre {
   border: 0.1rem solid #e7e7e7;
-  background: #f6f7f8;
+  background: #f8f9fa;
   font-family: "Fira Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 1.36rem;
   border-radius: 0.6rem;
@@ -530,7 +530,7 @@ ol {
 }
 
 blockquote {
-  color: #858687;
+  color: #6c6e6f;
   margin: 3.2rem 0;
   padding: 0 3.2rem;
 }
@@ -551,7 +551,7 @@ tr td {
 }
 
 tr th {
-  background: #f6f7f8;
+  background: #f8f9fa;
   font-weight: normal;
 }
 
@@ -634,7 +634,7 @@ header nav li {
 
 header nav a {
   display: block;
-  color: #9d9e9f;
+  color: #6c6e6f;
   font-weight: bold;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -661,12 +661,12 @@ main {
 }
 
 .post-list .post-date {
-  color: #858687;
+  color: #6c6e6f;
   font-size: 1.36rem;
   margin-left: 0.5em;
 }
 
 .post .post-date {
-  color: #858687;
+  color: #6c6e6f;
   margin: 2em 0 1em;
 }
