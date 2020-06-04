@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  color: $slate05;
+  color: $grey10;
   font-size: $font-size;
   font-family: $font-stack;
   font-weight: normal;
@@ -47,7 +47,7 @@ h6 {
 }
 
 a {
-  color: $slate05;
+  color: $grey10;
   text-decoration: none;
   border-bottom: solid 0.15em rgba($blue02, 0.5);
 
@@ -68,15 +68,15 @@ ol {
 }
 
 blockquote {
-  color: $grey06;
+  color: $grey05;
   margin: ($font-size * 2) 0;
   padding: 0 ($font-size * 2);
 }
 
 table {
+  font-size: $font-size * 0.85;
   border-spacing: 0;
   border: 0.1rem solid $grey01;
-  border-radius: 0.6rem;
   width: 100%;
 }
 
@@ -90,7 +90,7 @@ tr {
   }
 
   th {
-    background: rgba($slate01, 0.2);
+    background: $background-light;
     font-weight: normal;
   }
 
@@ -179,7 +179,7 @@ header {
       border-bottom: none;
 
       &:hover {
-        color: $slate05;
+        color: $grey10;
         border-bottom: none;
       }
     }

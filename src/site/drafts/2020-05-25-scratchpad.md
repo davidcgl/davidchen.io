@@ -69,9 +69,7 @@ Ordered
 
 ## Code
 
-Inline code
-
-`brew update && brew install python3`
+Run `brew install python3` to install Python3 using Homebrew.
 
 Unstyled
 
