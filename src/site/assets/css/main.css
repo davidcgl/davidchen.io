@@ -511,13 +511,12 @@ h6 {
 a {
   color: #0a0d0f;
   text-decoration: none;
-  border-bottom: solid 0.1em rgba(56, 103, 214, 0.75);
+  border-bottom: solid 0.15em rgba(56, 103, 214, 0.5);
 }
 
 a:hover {
-  color: #0a0d0f;
   text-decoration: none;
-  border-bottom: solid 0.1em #3867d6;
+  border-bottom: solid 0.15em #3867d6;
 }
 
 em,
@@ -538,7 +537,7 @@ blockquote {
 
 table {
   border-spacing: 0;
-  border: 1px solid rgba(10, 13, 15, 0.1);
+  border: 0.1rem solid rgba(10, 13, 15, 0.1);
   border-radius: 0.6rem;
   width: 100%;
 }
@@ -548,7 +547,7 @@ tr td {
   text-align: left;
   vertical-align: top;
   padding: 0.8rem 1.6rem;
-  border-bottom: 1px solid rgba(10, 13, 15, 0.1);
+  border-bottom: 0.1rem solid rgba(10, 13, 15, 0.1);
 }
 
 tr th {
@@ -644,8 +643,7 @@ header nav a {
 
 header nav a:hover {
   color: #0a0d0f;
-  border-bottom: solid 0.1em #3867d6;
-  margin-bottom: -0.1em;
+  border-bottom: none;
 }
 
 main {
