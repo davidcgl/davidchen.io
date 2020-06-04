@@ -142,6 +142,11 @@ header {
     a:hover {
       display: block;
       border-bottom: none;
+      transition: all .2s ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.1);
     }
 
     img {
