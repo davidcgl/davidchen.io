@@ -3,9 +3,9 @@
 // Inline code.
 :not(pre) > code {
   font-family: $font-stack-mono;
-  background: rgba($slate01, 0.2);
+  background: $background-light;
   border-radius: 0.2rem;
-  padding: 0.2rem 0;
+  padding: 0.2em 0;
 
   &:before,
   &:after {
@@ -15,8 +15,8 @@
 }
 
 pre {
-  border: 1px solid $grey01;
-  background: rgba($slate01, 0.2);
+  border: 0.1rem solid $grey01;
+  background: $background-light;
   font-family: $font-stack-mono;
   font-size: $font-size * 0.85;
   border-radius: 0.6rem;
@@ -26,7 +26,7 @@ pre {
 }
 
 pre > code {
-  color: $slate05;
+  color: $grey10;
   font-family: $font-stack-mono;
   text-align: left;
   white-space: pre;
@@ -50,7 +50,7 @@ pre > code {
 .token.macro.property,
 .token.punctuation,
 .token.variable {
-  color: $slate05;
+  color: $grey10;
 }
 
 .token.blockquote,

@@ -1,17 +1,13 @@
-$slate01: #d1dae1;
-$slate02: #93a8b9;
-$slate03: #5b768b;
-$slate04: #32414d;
-$slate05: #0a0d0f;
-$grey01: rgba($slate05, 0.1);
-$grey02: rgba($slate05, 0.2);
-$grey03: rgba($slate05, 0.3);
-$grey04: rgba($slate05, 0.4);
-$grey05: rgba($slate05, 0.5);
-$grey06: rgba($slate05, 0.6);
-$grey07: rgba($slate05, 0.7);
-$grey08: rgba($slate05, 0.8);
-$grey09: rgba($slate05, 0.9);
+$grey01: #e7e7e7;
+$grey02: #cecfcf;
+$grey03: #b6b6b7;
+$grey04: #9d9e9f;
+$grey05: #858687;
+$grey06: #6c6e6f;
+$grey07: #545657; 
+$grey08: #3b3d3f;
+$grey09: #232527; 
+$grey10: #0a0d0f;
 $red01: #ef5777;
 $red02: #f53b57; 
 $blue01: #4b7bec;
@@ -24,9 +20,13 @@ $yellow01: #ffdd59;
 $yellow02: #ffd32a;
 $orange01: #ffc048;
 $orange02: #ffa801;
+$slate01: #5b768b;
+$slate02: #32414d;
+
+$background-light: #f6f7f8;
 
 $font-size: 1.6rem;
-$page-width: $font-size * 37.5;
+$page-width: $font-size * 33.75;
 $page-gutter: 2rem;
 
 $font-stack: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',

@@ -5,7 +5,7 @@ const isIndex = (page) => path.basename(page.inputPath) === 'index.liquid';
 
 module.exports = {
   eleventyComputed: {
-    layout: (data) => (isIndex(data.page) ? 'base' : 'post'),
+    layout: (data) => (isIndex(data.page) ? 'page' : 'post'),
 
     permalink: (data) => {
       if (process.env.ELEVENTY_ENV === 'production') {

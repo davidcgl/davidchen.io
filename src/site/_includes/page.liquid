@@ -1,0 +1,23 @@
+---
+layout: root
+---
+<div class="page">
+  <header class="row">
+    <h1 class="logo">
+      <a href="/">
+        <img height="32" width="32" src="/assets/img/logo.svg" alt="logo" />
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        {%- if globals.environment == "development" -%}
+          <li><a href="/drafts">drafts</a></li>
+        {%- endif -%}
+        <li><a href="/about">about</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="row">
+    {{ content }}
+  </main>
+</div>
