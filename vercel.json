@@ -1,6 +1,16 @@
 {
   "version": 2,
   "routes": [
+    {
+      "src": "/assets/css/main-[a-zA-Z0-9]+.min.css",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
+    {
+      "src": "/assets/js/main-[a-zA-Z0-9]+.min.js",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
