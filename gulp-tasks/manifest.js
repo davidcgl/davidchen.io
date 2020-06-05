@@ -2,6 +2,7 @@ const del = require('del');
 const fg = require('fast-glob');
 const fs = require('fs');
 const path = require('path');
+const prettier = require('prettier');
 
 const { promisify } = require('util');
 const writeFileAsync = promisify(fs.writeFile);
@@ -11,7 +12,7 @@ const MANIFEST_FILE = 'src/site/_data/manifest.json';
 async function buildManifest() {
   const files = await fg([
     `src/site/assets/css/*.min.css`,
-    `src/site/assets/css/*.min.js`,
+    `src/site/assets/js/*.min.js`,
   ]);
 
   // Remove content hash from filename.
@@ -27,7 +28,13 @@ async function buildManifest() {
     .map((file) => path.basename(file))
     .reduce((acc, file) => ({ ...acc, [source(file)]: file }), {});
 
-  return writeFileAsync(MANIFEST_FILE, JSON.stringify(manifest));
+  return writeFileAsync(
+    MANIFEST_FILE,
+    prettier.format(JSON.stringify(manifest), {
+      config: './prettierrc.js',
+      parser: 'json',
+    })
+  );
 }
 
 function cleanManifest() {
