@@ -161,7 +161,7 @@ gulp.task('generate:favicon', (done) => {
         },
         windows: {
           pictureAspect: 'noChange',
-          backgroundColor: '#00aba9',
+          backgroundColor: '#ffffff',
           onConflict: 'override',
           assets: {
             windows80Ie10Tile: false,
@@ -190,7 +190,7 @@ gulp.task('generate:favicon', (done) => {
         safariPinnedTab: {
           pictureAspect: 'blackAndWhite',
           threshold: 92.34375,
-          themeColor: '#5bbad5',
+          themeColor: '#32414d',
         },
       },
       settings: {
