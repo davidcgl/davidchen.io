@@ -1,5 +1,6 @@
 ---
 title: Scratchpad
+draft: true
 ---
 
 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

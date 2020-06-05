@@ -37,20 +37,11 @@ module.exports = (config) => {
 
   config.addCollection('posts', (collection) => {
     const now = new Date();
-    const isLive = (post) => post.date <= now;
     return collection
       .getFilteredByGlob(`src/site/posts/*.md`)
-      .filter(isLive)
+      .filter((post) => !post.data.draft && post.date <= now)
       .reverse();
   });
-
-  config.addCollection('drafts', (collection) => {
-    return [...collection.getFilteredByGlob(`src/site/drafts/*.md`)].reverse();
-  });
-
-  config.addLiquidFilter('filter_by_year', (collection, year) =>
-    collection.filter((item) => item.date.getFullYear() == year)
-  );
 
   return {
     dir: { input: 'src/site', output: 'dist' },
