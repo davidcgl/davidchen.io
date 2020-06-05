@@ -536,7 +536,7 @@ blockquote {
 }
 
 table {
-  font-size: 1.36rem;
+  font-size: 1.4rem;
   border-spacing: 0;
   border: 0.1rem solid #e7e7e7;
   width: 100%;
@@ -603,7 +603,7 @@ header .logo a,
 header .logo a:hover {
   display: block;
   border-bottom: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 header .logo a:hover {
