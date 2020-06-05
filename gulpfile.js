@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
+const realFavicon = require('gulp-real-favicon');
 const rev = require('gulp-rev');
 const size = require('gulp-size');
 const sass = require('gulp-sass');
@@ -132,5 +133,78 @@ gulp.task('watch', async () => {
   gulp.watch(
     'src/js/**/*',
     gulp.series(['clean:js', 'build:js', 'build:manifest'])
+  );
+});
+
+// From RealFaviconGenerator:
+// https://realfavicongenerator.net/favicon_result?file_id=p1ea18tmeaobk3uiu0e1oo1soh6#.XtnHF55KhTY
+gulp.task('generate:favicon', (done) => {
+  realFavicon.generateFavicon(
+    {
+      masterPicture: 'src/logo/logo.svg',
+      dest: paths.siteDir,
+      iconsPath: '/',
+      design: {
+        ios: {
+          pictureAspect: 'backgroundAndMargin',
+          backgroundColor: '#ffffff',
+          margin: '18%',
+          assets: {
+            ios6AndPriorIcons: false,
+            ios7AndLaterIcons: false,
+            precomposedIcons: false,
+            declareOnlyDefaultIcon: true,
+          },
+        },
+        desktopBrowser: {
+          design: 'raw',
+        },
+        windows: {
+          pictureAspect: 'noChange',
+          backgroundColor: '#00aba9',
+          onConflict: 'override',
+          assets: {
+            windows80Ie10Tile: false,
+            windows10Ie11EdgeTiles: {
+              small: false,
+              medium: true,
+              big: false,
+              rectangle: false,
+            },
+          },
+        },
+        androidChrome: {
+          pictureAspect: 'noChange',
+          themeColor: '#ffffff',
+          manifest: {
+            display: 'standalone',
+            orientation: 'notSet',
+            onConflict: 'override',
+            declared: true,
+          },
+          assets: {
+            legacyIcon: false,
+            lowResolutionIcons: false,
+          },
+        },
+        safariPinnedTab: {
+          pictureAspect: 'blackAndWhite',
+          threshold: 92.34375,
+          themeColor: '#5bbad5',
+        },
+      },
+      settings: {
+        compression: 1,
+        scalingAlgorithm: 'Mitchell',
+        errorOnImageTooSmall: false,
+        readmeFile: false,
+        htmlCodeFile: false,
+        usePathAsIs: false,
+      },
+      markupFile: `${paths.siteDataDir}/favicon.json`,
+    },
+    function () {
+      done();
+    }
   );
 });

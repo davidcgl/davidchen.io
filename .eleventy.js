@@ -32,7 +32,10 @@ module.exports = (config) => {
   });
 
   config.addPassthroughCopy(paths.siteAssetsDir);
-  config.addPassthroughCopy(`${paths.siteDir}/favicon.ico`);
+  config.addPassthroughCopy(`${paths.siteDir}/*.png`);
+  config.addPassthroughCopy(`${paths.siteDir}/safari-pinned-tab.svg`);
+  config.addPassthroughCopy(`${paths.siteDir}/browserconfig.xml`);
+  config.addPassthroughCopy(`${paths.siteDir}/site.webmanifest`);
 
   config.addCollection('posts', (collection) => {
     const now = new Date();
