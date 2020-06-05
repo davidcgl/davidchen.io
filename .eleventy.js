@@ -1,5 +1,3 @@
-const paths = require('./paths.js');
-
 module.exports = (config) => {
   const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
   config.addPlugin(syntaxHighlight);
@@ -31,23 +29,23 @@ module.exports = (config) => {
     return content;
   });
 
-  config.addPassthroughCopy(paths.siteAssetsDir);
-  config.addPassthroughCopy(`${paths.siteDir}/*.png`);
-  config.addPassthroughCopy(`${paths.siteDir}/favicon.ico`);
+  config.addPassthroughCopy('src/site/assets');
+  config.addPassthroughCopy(`src/site/apple-touch-icon.png`);
+  config.addPassthroughCopy(`src/site/favicon-16x16.png`);
+  config.addPassthroughCopy(`src/site/favicon-32x32.png`);
+  config.addPassthroughCopy(`src/site/favicon.ico`);
 
   config.addCollection('posts', (collection) => {
     const now = new Date();
     const isLive = (post) => post.date <= now;
     return collection
-      .getFilteredByGlob(`${paths.siteDir}/posts/*.md`)
+      .getFilteredByGlob(`src/site/posts/*.md`)
       .filter(isLive)
       .reverse();
   });
 
   config.addCollection('drafts', (collection) => {
-    return [
-      ...collection.getFilteredByGlob(`${paths.siteDir}/drafts/*.md`),
-    ].reverse();
+    return [...collection.getFilteredByGlob(`src/site/drafts/*.md`)].reverse();
   });
 
   config.addLiquidFilter('filter_by_year', (collection, year) =>
@@ -55,7 +53,7 @@ module.exports = (config) => {
   );
 
   return {
-    dir: { input: paths.siteDir, output: 'dist' },
+    dir: { input: 'src/site', output: 'dist' },
     templateFormats: ['html', 'md', 'liquid'],
     passthroughFileCopy: true,
   };
