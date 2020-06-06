@@ -663,6 +663,7 @@ main {
   color: #f53b57;
   background: rgba(245, 59, 87, 0.2);
   font-size: 1rem;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   border-radius: 8px;
