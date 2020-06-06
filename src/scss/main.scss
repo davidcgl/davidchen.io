@@ -195,7 +195,18 @@ main {
   margin: 0;
 
   li {
-    padding: 0 0 1em 0;
+    margin: 1em 0;
+  }
+
+  .post-draft-label {
+    color: $red02;
+    background: rgba($red02, 0.2);
+    font-size: $font-size * 0.625;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 8px;
+    padding: 0.2em 0.8em;
+    margin-left: 1em;
   }
 
   .post-date {
