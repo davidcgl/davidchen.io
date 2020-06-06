@@ -1,4 +1,4 @@
-const paths = require('./paths.js');
+const moment = require('moment');
 
 module.exports = (config) => {
   const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -31,35 +31,36 @@ module.exports = (config) => {
     return content;
   });
 
-  config.addPassthroughCopy(paths.siteAssetsDir);
-  config.addPassthroughCopy(`${paths.siteDir}/*.png`);
-  config.addPassthroughCopy(`${paths.siteDir}/favicon.ico`);
-  config.addPassthroughCopy(`${paths.siteDir}/safari-pinned-tab.svg`);
-  config.addPassthroughCopy(`${paths.siteDir}/browserconfig.xml`);
-  config.addPassthroughCopy(`${paths.siteDir}/site.webmanifest`);
+  config.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: '<!-- excerpt -->',
+  });
+
+  config.addFilter("date", (date, format) => {
+    return moment(date).format(format);
+  });
 
   config.addCollection('posts', (collection) => {
     const now = new Date();
-    const isLive = (post) => post.date <= now;
     return collection
-      .getFilteredByGlob(`${paths.siteDir}/posts/*.md`)
-      .filter(isLive)
+      .getFilteredByGlob('src/site/posts/*.md')
+      .filter((post) =>
+        process.env.ELEVENTY_ENV === 'production'
+          ? post.date <= now && !post.data.draft
+          : post.date <= now
+      )
       .reverse();
   });
 
-  config.addCollection('drafts', (collection) => {
-    return [
-      ...collection.getFilteredByGlob(`${paths.siteDir}/drafts/*.md`),
-    ].reverse();
-  });
-
-  config.addLiquidFilter('filter_by_year', (collection, year) =>
-    collection.filter((item) => item.date.getFullYear() == year)
-  );
+  config.addPassthroughCopy('src/site/assets');
+  config.addPassthroughCopy('src/site/apple-touch-icon.png');
+  config.addPassthroughCopy('src/site/favicon-16x16.png');
+  config.addPassthroughCopy('src/site/favicon-32x32.png');
+  config.addPassthroughCopy('src/site/favicon.ico');
 
   return {
-    dir: { input: paths.siteDir, output: 'dist' },
-    templateFormats: ['html', 'md', 'liquid'],
+    dir: { input: 'src/site', output: 'dist' },
+    templateFormats: ['html', 'md', 'njk'],
     passthroughFileCopy: true,
   };
 };

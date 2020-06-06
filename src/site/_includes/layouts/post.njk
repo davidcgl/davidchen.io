@@ -1,0 +1,14 @@
+{% extends 'layouts/base.njk' %}
+
+{% set metaTitle = title ~ ' — David Chen' %}
+{% set metaDescription = page.excerpt | trim | replace('\n', '') %}
+
+{% block content %}
+
+  <article class="post">
+    <h1>{{ title }}</h1>
+    <div class="post-date">{{ page.date | date('MMMM D, YYYY') }}</div>
+    {{ content | safe }}
+  </article>
+
+{% endblock %}
