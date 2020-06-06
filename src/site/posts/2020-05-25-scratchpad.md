@@ -7,6 +7,8 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
 when an unknown printer took a galley of type and scrambled it to make a type
 specimen book.
 
+<!-- excerpt -->
+
 This is a [link](https://davidchen.io).
 
 This is a [link with title](https://davidchen.io 'title text!').

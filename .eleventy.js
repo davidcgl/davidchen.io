@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 module.exports = (config) => {
   const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
   config.addPlugin(syntaxHighlight);
@@ -29,13 +31,13 @@ module.exports = (config) => {
     return content;
   });
 
-  config.setLiquidOptions({
-    dynamicPartials: true, // without this, we can't have folders in _includes
-  });
-
   config.setFrontMatterParsingOptions({
     excerpt: true,
     excerpt_separator: '<!-- excerpt -->',
+  });
+
+  config.addFilter("date", (date, format) => {
+    return moment(date).format(format);
   });
 
   config.addCollection('posts', (collection) => {
@@ -58,7 +60,7 @@ module.exports = (config) => {
 
   return {
     dir: { input: 'src/site', output: 'dist' },
-    templateFormats: ['html', 'md', 'liquid'],
+    templateFormats: ['html', 'md', 'njk'],
     passthroughFileCopy: true,
   };
 };
