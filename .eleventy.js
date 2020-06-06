@@ -36,7 +36,7 @@ module.exports = (config) => {
     return content;
   });
 
-  config.addFilter('date', (date, format) => {
+  config.addFilter('moment', (date, format) => {
     return moment(date).format(format);
   });
 
