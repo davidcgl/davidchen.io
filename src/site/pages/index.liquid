@@ -1,9 +1,9 @@
 ---
-layout: base
+layout: layouts/base
 title: Home
 permalink: index.html
 ---
 
 <h1>Writings</h1>
 
-{% include posts, posts: collections.posts %}
+{% include 'partials/posts', posts: collections.posts %}

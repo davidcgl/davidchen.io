@@ -29,6 +29,10 @@ module.exports = (config) => {
     return content;
   });
 
+  config.setLiquidOptions({
+    dynamicPartials: true, // without this, we can't have folders in _includes
+  });
+
   config.setFrontMatterParsingOptions({
     excerpt: true,
     excerpt_separator: '<!-- excerpt -->',
@@ -39,7 +43,7 @@ module.exports = (config) => {
     return collection
       .getFilteredByGlob('src/site/posts/*.md')
       .filter((post) =>
-        process.env.NODE_ENV === 'production'
+        process.env.ELEVENTY_ENV === 'production'
           ? post.date <= now && !post.data.draft
           : post.date <= now
       )
