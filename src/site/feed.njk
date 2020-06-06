@@ -7,13 +7,14 @@ eleventyExcludeFromCollections: true
   <id>{{ metadata.url }}</id>
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
+  <icon>{{ metadata.url ~ '/assets/logo/logo-48x48.png' }}</icon>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-  <link rel="self" href="{{ metadata.url ~ 'feed.xml' }}"/>
-  <link rel="alternate" href="{{ metadata.url }}"/>
+  <link rel="self" href="{{ metadata.url ~ '/feed.xml' }}"/>
+  <link rel="alternate" href="{{ metadata.url }}/"/>
   {%- for post in collections.posts %}
     {%- set absolutePostUrl %}
     {{- post.url | url | absoluteUrl(metadata.url) }}
