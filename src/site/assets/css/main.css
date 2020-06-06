@@ -649,17 +649,17 @@ main {
   padding: 3.2rem 0 9.6rem;
 }
 
-.post-list {
+.posts {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.post-list li {
+.posts li {
   padding: 0 0 1em 0;
 }
 
-.post-list .post-date {
+.posts .post-date {
   color: #6c6e6f;
   font-size: 1.36rem;
   margin-left: 0.5em;
