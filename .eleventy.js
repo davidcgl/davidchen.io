@@ -1,7 +1,9 @@
 const htmlmin = require('html-minifier');
 const markdownIt = require('markdown-it');
 const moment = require('moment');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = (config) => {
   config.setFrontMatterParsingOptions({
@@ -15,7 +17,8 @@ module.exports = (config) => {
     typographer: true,
   }));
 
-  config.addPlugin(syntaxHighlight);
+  config.addPlugin(pluginRss);
+  config.addPlugin(pluginSyntaxHighlight);
 
   config.addTransform('htmlmin', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
