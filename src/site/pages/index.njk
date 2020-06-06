@@ -4,14 +4,14 @@ permalink: index.html
 
 {% extends 'layouts/base.njk' %}
 
-{% set metaTitle = 'David Chen' %}
-{% set metaDescription = 'Ramblings by David Chen' %}
+{% set metaTitle = metadata.title %}
+{% set metaDescription = metadata.description %}
 
 {% block content %}
 
   <h1>Writings</h1>
   <ul class="posts">
-    {% for post in collections.posts %}
+    {%- for post in collections.posts %}
       <li>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
         <span class="post-date">{{ post.date | moment('MMMM D, YYYY') }}</span>
@@ -19,7 +19,7 @@ permalink: index.html
           <span class="post-draft-label">Draft</span>
         {% endif %}
       </li>
-    {% endfor %}
+    {%- endfor %}
   </ul>
 
 {% endblock %}
