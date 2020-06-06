@@ -1,4 +1,4 @@
 module.exports = {
   layout: 'post',
-  permalink: '{{ title | slug }}/'
+  permalink: '{{ title | slug }}/index.html',
 };

@@ -29,19 +29,28 @@ module.exports = (config) => {
     return content;
   });
 
-  config.addPassthroughCopy('src/site/assets');
-  config.addPassthroughCopy(`src/site/apple-touch-icon.png`);
-  config.addPassthroughCopy(`src/site/favicon-16x16.png`);
-  config.addPassthroughCopy(`src/site/favicon-32x32.png`);
-  config.addPassthroughCopy(`src/site/favicon.ico`);
+  config.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: '<!-- excerpt -->',
+  });
 
   config.addCollection('posts', (collection) => {
     const now = new Date();
     return collection
-      .getFilteredByGlob(`src/site/posts/*.md`)
-      .filter((post) => !post.data.draft && post.date <= now)
+      .getFilteredByGlob('src/site/posts/*.md')
+      .filter((post) =>
+        process.env.NODE_ENV === 'production'
+          ? post.date <= now && !post.data.draft
+          : post.date <= now
+      )
       .reverse();
   });
+
+  config.addPassthroughCopy('src/site/assets');
+  config.addPassthroughCopy('src/site/apple-touch-icon.png');
+  config.addPassthroughCopy('src/site/favicon-16x16.png');
+  config.addPassthroughCopy('src/site/favicon-32x32.png');
+  config.addPassthroughCopy('src/site/favicon.ico');
 
   return {
     dir: { input: 'src/site', output: 'dist' },
