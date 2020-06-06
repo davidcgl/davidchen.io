@@ -1,17 +1,22 @@
+const htmlmin = require('html-minifier');
+const markdownIt = require('markdown-it');
 const moment = require('moment');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = (config) => {
-  const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-  config.addPlugin(syntaxHighlight);
+  config.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: '<!-- excerpt -->',
+  });
 
-  const markdownIt = require('markdown-it')({
+  config.setLibrary('md', markdownIt({
     html: true,
     linkify: true,
     typographer: true,
-  });
-  config.setLibrary('md', markdownIt);
+  }));
 
-  const htmlmin = require('html-minifier');
+  config.addPlugin(syntaxHighlight);
+
   config.addTransform('htmlmin', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
@@ -31,12 +36,7 @@ module.exports = (config) => {
     return content;
   });
 
-  config.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_separator: '<!-- excerpt -->',
-  });
-
-  config.addFilter("date", (date, format) => {
+  config.addFilter('date', (date, format) => {
     return moment(date).format(format);
   });
 
@@ -60,7 +60,10 @@ module.exports = (config) => {
 
   return {
     dir: { input: 'src/site', output: 'dist' },
-    templateFormats: ['html', 'md', 'njk'],
     passthroughFileCopy: true,
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+    templateFormats: ['html', 'md', 'njk'],
   };
 };
