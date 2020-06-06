@@ -338,10 +338,10 @@ template {
 }
 
 :not(pre) > code {
-  font-family: "Fira Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  background: #f8f9fa;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  background: #e7e7e7;
   border-radius: 0.2rem;
-  padding: 0.2em 0;
+  padding: 0.05em 0;
 }
 
 :not(pre) > code:before, :not(pre) > code:after {
@@ -352,8 +352,8 @@ template {
 pre {
   border: 0.1rem solid #e7e7e7;
   background: #f8f9fa;
-  font-family: "Fira Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 1.36rem;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 1.2rem;
   border-radius: 0.6rem;
   padding: 1.6rem;
   margin: 1.6rem 0;
@@ -362,7 +362,7 @@ pre {
 
 pre > code {
   color: #0a0d0f;
-  font-family: "Fira Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -668,7 +668,7 @@ main {
 
 .posts .post-date {
   color: #6c6e6f;
-  font-size: 1.36rem;
+  font-size: 1.4rem;
   margin-left: 0.5em;
 }
 
