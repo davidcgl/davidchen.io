@@ -602,11 +602,6 @@ header .logo a,
 header .logo a:hover {
   display: block;
   border-bottom: none;
-  transition: all 0.2s ease-in-out;
-}
-
-header .logo a:hover {
-  transform: translateY(2px);
 }
 
 header .logo svg {
