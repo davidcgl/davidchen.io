@@ -24,7 +24,9 @@
     <meta property="og:url" content="{{ metadata.url ~ page.url }}">
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription }}">
-    <meta property="og:image" content="{{ metaImage }}">
+    {%- if metaImage %}
+      <meta property="og:image" content="{{ metaImage }}">
+    {%- endif %}
     <meta property="og:site_name" content="davidchen.now.sh">
 
     <meta name="twitter:card" content="summary">
@@ -32,6 +34,9 @@
     <meta name="twitter:creator" content="{{ metadata.author.twitter }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
+    {%- if metaImage %}
+      <meta name="twitter:image" content="{{ metaImage }}">
+    {%- endif %}
 
     <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
   </head>
