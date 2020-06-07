@@ -654,7 +654,7 @@ main {
   margin: 1em 0;
 }
 
-.posts .post-draft-label {
+.posts .draft-label {
   color: #f53b57;
   background: rgba(245, 59, 87, 0.2);
   font-size: 1rem;
@@ -666,13 +666,14 @@ main {
   margin-left: 1em;
 }
 
-.posts .post-date {
+.posts .published-date {
   color: #6c6e6f;
   font-size: 1.4rem;
   margin-left: 0.5em;
 }
 
-.post .post-date {
+.post .published-date {
+  display: block;
   color: #6c6e6f;
   margin: 2em 0 1em;
 }

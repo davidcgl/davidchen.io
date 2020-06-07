@@ -193,7 +193,7 @@ main {
     margin: 1em 0;
   }
 
-  .post-draft-label {
+  .draft-label {
     color: $red02;
     background: rgba($red02, 0.2);
     font-size: $font-size * 0.625;
@@ -205,7 +205,7 @@ main {
     margin-left: 1em;
   }
 
-  .post-date {
+  .published-date {
     color: $grey06;
     font-size: $font-size * 0.875;
     margin-left: 0.5em;
@@ -213,7 +213,8 @@ main {
 }
 
 .post {
-  .post-date {
+  .published-date {
+    display: block;
     color: $grey06;
     margin: 2em 0 1em;
   }
