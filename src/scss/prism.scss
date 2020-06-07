@@ -3,9 +3,9 @@
 // Inline code.
 :not(pre) > code {
   font-family: $font-stack-mono;
-  background: $background-light;
+  background: $grey01;
   border-radius: 0.2rem;
-  padding: 0.2em 0;
+  padding: 0.05em 0;
 
   &:before,
   &:after {
@@ -18,7 +18,7 @@ pre {
   border: 0.1rem solid $grey01;
   background: $background-light;
   font-family: $font-stack-mono;
-  font-size: $font-size * 0.85;
+  font-size: $font-size * 0.75;
   border-radius: 0.6rem;
   padding: $font-size;
   margin: $font-size 0;

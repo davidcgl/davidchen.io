@@ -26,10 +26,9 @@ $slate02: #32414d;
 $background-light: #f8f9fa;
 
 $font-size: 1.6rem;
-$page-width: $font-size * 33.75;
+$page-width: $font-size * 33.75; // 540px, 75-80 characters per line
 $page-gutter: 2rem;
 
 $font-stack: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   'Helvetica Neue', Roboto, Ubuntu, sans-serif;
-$font-stack-mono: 'Fira Mono', SFMono-Regular, Menlo, Consolas,
-  'Liberation Mono', monospace;
+$font-stack-mono: 'Fira Mono', Menlo, Consolas, 'Liberation Mono', monospace;

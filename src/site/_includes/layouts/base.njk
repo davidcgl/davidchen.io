@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="{{ metaDescription }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ metaTitle  }}</title>
+    <title>{{ metaTitle }}</title>
+
+    <meta name="description" content="{{ metaDescription }}">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -16,6 +17,23 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="canonical" href="{{ site.url ~ page.url }}">
+    <link rel="alternate" type="application/atom+xml" title=href="{{ site.url ~ '/feed.xml' }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url ~ page.url }}">
+    <meta property="og:title" content="{{ metaTitle }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:image" content="{{ site.logo }}">
+    <meta property="og:site_name" content="davidchen.now.sh">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.author.twitter }}">
+    <meta name="twitter:creator" content="{{ site.author.twitter }}">
+    <meta name="twitter:title" content="{{ metaTitle }}">
+    <meta name="twitter:description" content="{{ metaDescription }}">
+    <meta name="twitter:image" content="{{ site.logo }}">
 
     <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
   </head>

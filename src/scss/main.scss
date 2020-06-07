@@ -140,11 +140,6 @@ header {
     a:hover {
       display: block;
       border-bottom: none;
-      transition: all 0.2s ease-in-out;
-    }
-
-    a:hover {
-      transform: translateY(2px);
     }
 
     svg {
@@ -202,6 +197,7 @@ main {
     color: $red02;
     background: rgba($red02, 0.2);
     font-size: $font-size * 0.625;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     border-radius: 8px;
@@ -211,7 +207,7 @@ main {
 
   .post-date {
     color: $grey06;
-    font-size: $font-size * 0.85;
+    font-size: $font-size * 0.875;
     margin-left: 0.5em;
   }
 }
