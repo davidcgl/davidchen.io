@@ -19,14 +19,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link rel="canonical" href="{{ site.url ~ page.url }}">
-
+    <link rel="alternate" type="application/atom+xml" title=href="{{ site.url ~ '/feed.xml' }}">
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url ~ page.url }}">
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription }}">
-    {%- if metaImage %}
-      <meta property="og:image" content="{{ metaImage }}">
-    {%- endif %}
+    <meta property="og:image" content="{{ site.logo }}">
     <meta property="og:site_name" content="davidchen.now.sh">
 
     <meta name="twitter:card" content="summary">
@@ -34,9 +33,7 @@
     <meta name="twitter:creator" content="{{ site.author.twitter }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
-    {%- if metaImage %}
-      <meta name="twitter:image" content="{{ metaImage }}">
-    {%- endif %}
+    <meta name="twitter:image" content="{{ site.logo }}">
 
     <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
   </head>
