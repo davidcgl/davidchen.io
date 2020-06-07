@@ -28,13 +28,12 @@ async function buildManifest() {
     .map((file) => path.basename(file))
     .reduce((acc, file) => ({ ...acc, [source(file)]: file }), {});
 
-  return writeFileAsync(
-    MANIFEST_FILE,
-    prettier.format(JSON.stringify(manifest), {
-      config: './prettierrc.js',
-      parser: 'json',
-    })
-  );
+  const json = prettier.format(JSON.stringify(manifest), {
+    config: './prettierrc.js',
+    parser: 'json',
+  });
+
+  return writeFileAsync(MANIFEST_FILE, json);
 }
 
 function cleanManifest() {
