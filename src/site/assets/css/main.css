@@ -338,7 +338,7 @@ template {
 }
 
 :not(pre) > code {
-  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: "Fira Mono", Menlo, Consolas, "Liberation Mono", monospace;
   background: #e7e7e7;
   border-radius: 0.2rem;
   padding: 0.05em 0;
@@ -352,7 +352,7 @@ template {
 pre {
   border: 0.1rem solid #e7e7e7;
   background: #f8f9fa;
-  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: "Fira Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 1.2rem;
   border-radius: 0.6rem;
   padding: 1.6rem;
@@ -362,7 +362,7 @@ pre {
 
 pre > code {
   color: #0a0d0f;
-  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: "Fira Mono", Menlo, Consolas, "Liberation Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
