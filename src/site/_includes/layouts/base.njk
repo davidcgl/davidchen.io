@@ -18,10 +18,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-    <link rel="canonical" href="{{ metadata.url ~ page.url }}">
+    <link rel="canonical" href="{{ site.url ~ page.url }}">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ metadata.url ~ page.url }}">
+    <meta property="og:url" content="{{ site.url ~ page.url }}">
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription }}">
     {%- if metaImage %}
@@ -30,8 +30,8 @@
     <meta property="og:site_name" content="davidchen.now.sh">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ metadata.author.twitter }}">
-    <meta name="twitter:creator" content="{{ metadata.author.twitter }}">
+    <meta name="twitter:site" content="{{ site.author.twitter }}">
+    <meta name="twitter:creator" content="{{ site.author.twitter }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
     {%- if metaImage %}

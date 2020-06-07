@@ -4,20 +4,20 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>{{ metadata.url ~ '/' }}</id>
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.description }}</subtitle>
-  <icon>{{ metadata.url ~ '/assets/logo/logo-48x48.png' }}</icon>
+  <id>{{ site.url ~ '/' }}</id>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <icon>{{ site.url ~ '/assets/logo/logo-48x48.png' }}</icon>
   <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
   </author>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-  <link rel="self" href="{{ metadata.url ~ '/feed.xml' }}"/>
-  <link rel="alternate" href="{{ metadata.url }}/"/>
+  <link rel="self" href="{{ site.url ~ '/feed.xml' }}"/>
+  <link rel="alternate" href="{{ site.url }}/"/>
   {%- for post in collections.posts %}
     {%- set absolutePostUrl %}
-    {{- post.url | url | absoluteUrl(metadata.url) }}
+    {{- post.url | url | absoluteUrl(site.url) }}
     {%- endset %}
     <entry>
       <id>{{ absolutePostUrl }}</id>
