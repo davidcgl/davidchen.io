@@ -570,6 +570,9 @@ hr {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -639,6 +642,7 @@ header nav a:hover {
 }
 
 main {
+  flex: 1 0 auto;
   padding: 3.2rem 0 9.6rem;
 }
 

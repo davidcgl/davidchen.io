@@ -110,6 +110,9 @@ hr {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-left: $page-gutter;
   padding-right: $page-gutter;
 
@@ -179,8 +182,35 @@ header {
 }
 
 main {
+  flex: 1 0 auto;
   padding: $font-size * 2 0 $font-size * 6;
 }
+
+// footer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: $grey06;
+//   font-size: $font-size * 0.875;
+//   border-top: 0.1rem solid $grey01;
+//   padding: $font-size * 2 0;
+
+//   .social {
+//     a {
+//       display: inline-block;
+//       padding: 0.8rem;
+//       margin-left: 0.8rem;
+
+//       &:first-child {
+//         margin-left: 0;
+//       }
+//     }
+
+//     img {
+//       display: block;
+//     }
+//   }
+// }
 
 .posts {
   list-style: none;
