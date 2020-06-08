@@ -18,7 +18,7 @@ permalink: index.html
           {{ post.date | moment('MMMM D, YYYY') }}
         </time>
         {% if post.data.draft %}
-          <span class="draft-label">Draft</span>
+          <span class="draft">Draft</span>
         {% endif %}
       </li>
     {%- endfor %}
