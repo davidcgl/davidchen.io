@@ -5,15 +5,30 @@ permalink: about/index.html
 {% extends 'layouts/base.njk' %}
 
 {% set metaTitle = 'About — David Chen' %}
-{% set metaDescription = 'David Chen is a software engineer in San Francisco' %}
+{% set metaDescription = 'David Chen is a software engineer living in the San Francisco Bay Area.' %}
 
 {% block content %}
 
-  <h1>Hello!</h1>
+  <h1>Hello.</h1>
+
   <p>
-    I'm David. I'm a product engineer at <a href="https://stripe.com">Stripe</a>,
-    where I build products to delight new users. I currently live in the San
-    Francisco Bay Area.
+    I'm David Chen, a software engineer living in the San Francisco Bay Area.
+    This site is dedicated to my creative interests and whim. 
+  </p>
+
+  <p>
+   I work at <a href="https://stripe.com">Stripe</a>, where I build products to
+   delight new users. Previously, I've worked at Google and Amazon, and studied
+   computer science at the University of Michigan in Ann Arbor.
+  </p>
+
+  <p>
+    My blog has an <a href="/feed.xml">Atom feed</a>. My email address is
+    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+    You can also find me on
+    <a href="{{ site.twitter.link }}">Twitter</a>,
+    <a href="{{ site.github.link }}">GitHub</a>, and
+    <a href="{{ site.linkedin.link }}">LinkedIn</a>.
   </p>
 
 {% endblock %}

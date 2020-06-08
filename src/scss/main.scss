@@ -47,13 +47,12 @@ h6 {
 }
 
 a {
-  color: $grey10;
-  text-decoration: none;
-  border-bottom: solid 0.15em rgba($blue02, 0.5);
+  color: $blue02;
+  text-decoration: underline rgba($blue02, 0.4);
 
   &:hover {
-    text-decoration: none;
-    border-bottom: solid 0.15em $blue02;
+    color: $blue02;
+    text-decoration: underline $blue02;
   }
 }
 
@@ -111,6 +110,9 @@ hr {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-left: $page-gutter;
   padding-right: $page-gutter;
 
@@ -139,7 +141,6 @@ header {
     a,
     a:hover {
       display: block;
-      border-bottom: none;
     }
 
     svg {
@@ -170,19 +171,46 @@ header {
       font-weight: bold;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      border-bottom: none;
+      text-decoration: none;
 
       &:hover {
         color: $grey10;
-        border-bottom: none;
+        text-decoration: none;
       }
     }
   }
 }
 
 main {
+  flex: 1 0 auto;
   padding: $font-size * 2 0 $font-size * 6;
 }
+
+// footer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: $grey06;
+//   font-size: $font-size * 0.875;
+//   border-top: 0.1rem solid $grey01;
+//   padding: $font-size * 2 0;
+
+//   .social {
+//     a {
+//       display: inline-block;
+//       padding: 0.8rem;
+//       margin-left: 0.8rem;
+
+//       &:first-child {
+//         margin-left: 0;
+//       }
+//     }
+
+//     img {
+//       display: block;
+//     }
+//   }
+// }
 
 .posts {
   list-style: none;
@@ -191,21 +219,35 @@ main {
 
   li {
     margin: 1em 0;
+
+    a {
+      color: $grey10;
+      text-decoration: none;
+      border-bottom: solid 0.15em rgba($blue02, 0.4);
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: solid 0.15em $blue02;
+      }
+    }
   }
 
-  .post-draft-label {
+  .draft {
     color: $red02;
     background: rgba($red02, 0.2);
     font-size: $font-size * 0.625;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    border-radius: 8px;
+    border-radius: 0.8em;
     padding: 0.2em 0.8em;
-    margin-left: 1em;
+    margin-left: 0.2em;
+    position: relative;
+    left: 0;
+    bottom: 0.2em;
   }
 
-  .post-date {
+  .published-date {
     color: $grey06;
     font-size: $font-size * 0.875;
     margin-left: 0.5em;
@@ -213,7 +255,8 @@ main {
 }
 
 .post {
-  .post-date {
+  .published-date {
+    display: block;
     color: $grey06;
     margin: 2em 0 1em;
   }

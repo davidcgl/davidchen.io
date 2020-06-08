@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link rel="canonical" href="{{ site.url ~ page.url }}">
-    <link rel="alternate" type="application/atom+xml" title="Atom feed — David Chen" href="{{ site.url ~ '/feed.xml' }}">
+    <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="/feed.xml">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url ~ page.url }}">
@@ -29,8 +29,8 @@
     <meta property="og:site_name" content="davidchen.now.sh">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ site.author.twitter }}">
-    <meta name="twitter:creator" content="{{ site.author.twitter }}">
+    <meta name="twitter:site" content="{{ site.twitter.handle }}">
+    <meta name="twitter:creator" content="{{ site.twitter.handle }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
     <meta name="twitter:image" content="{{ site.logo }}">
@@ -72,6 +72,17 @@
       <main class="row">
         {% block content %}{% endblock %}
       </main>
+      <footer class="row">
+      <!--
+        <div class="copyright">© David Chen 2020</div>
+        <div class="social">
+          <a href="/feed.xml"><img width="16" height="16" src="/assets/img/logo-rss.svg" alt="Atom"></a>
+          <a href="{{ site.twitter.link }}"><img width="16" height="16" src="/assets/img/logo-twitter.svg" alt="Twitter"></a>
+          <a href="{{ site.github.link }}"><img width="16" height="16" src="/assets/img/logo-github.svg" alt="GitHub"></a>
+          <a href="{{ site.linkedin.link }}"><img width="16" height="16" src="/assets/img/logo-linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      -->
+      </footer>
     </div>
   </body>
 </html>

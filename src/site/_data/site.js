@@ -6,6 +6,16 @@ module.exports = {
   author: {
     name: 'David Chen',
     email: 'me@davidchen.io',
-    twitter: '@archenary', 
+  },
+  twitter: {
+    link: 'https://twitter.com/archenary',
+    handle: '@archenary',
+  },
+  github: {
+    link: 'https://github.com/davidcgl',
+    handle: 'davidcgl',
+  },
+  linkedin: {
+    link: 'https://www.linkedin.com/in/davidcgl',
   },
 };

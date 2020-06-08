@@ -13,7 +13,7 @@ This is a [link](https://davidchen.io).
 
 This is a [link with title](https://davidchen.io 'title text!').
 
-Type `⌘-Tab` to tab 
+Type `⌘-Tab` to tab
 
 This is a `linkify` link: https://davidchen.io
 
@@ -102,11 +102,14 @@ module.exports = (config) => {
     excerpt_separator: '<!-- excerpt -->',
   });
 
-  config.setLibrary('md', markdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-  }));
+  config.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      linkify: true,
+      typographer: true,
+    })
+  );
 
   config.addPlugin(syntaxHighlight);
 
@@ -160,7 +163,6 @@ module.exports = (config) => {
     templateFormats: ['html', 'md', 'njk'],
   };
 };
-
 ```
 
 JSX

@@ -7,7 +7,9 @@
 
   <article class="post">
     <h1>{{ title }}</h1>
-    <div class="post-date">{{ page.date | moment('MMMM D, YYYY') }}</div>
+    <time class="published-date" datetime="{{ page.date | moment('YYYY-MM-DD') }}">
+      {{ page.date | moment('MMMM D, YYYY') }}
+    </time>
     {{ content | safe }}
   </article>
 

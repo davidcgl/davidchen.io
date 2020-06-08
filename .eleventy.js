@@ -11,11 +11,14 @@ module.exports = (config) => {
     excerpt_separator: '<!-- excerpt -->',
   });
 
-  config.setLibrary('md', markdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-  }));
+  config.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      linkify: true,
+      typographer: true,
+    })
+  );
 
   config.addPlugin(pluginRss);
   config.addPlugin(pluginSyntaxHighlight);

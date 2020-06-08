@@ -14,9 +14,11 @@ permalink: index.html
     {%- for post in collections.posts %}
       <li>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
-        <span class="post-date">{{ post.date | moment('MMMM D, YYYY') }}</span>
+        <time class="published-date" datetime="{{ post.date | moment('YYYY-MM-DD') }}">
+          {{ post.date | moment('MMMM D, YYYY') }}
+        </time>
         {% if post.data.draft %}
-          <span class="post-draft-label">Draft</span>
+          <span class="draft">Draft</span>
         {% endif %}
       </li>
     {%- endfor %}
