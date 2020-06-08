@@ -19,21 +19,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link rel="canonical" href="{{ site.url ~ page.url }}">
-    <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="{{ site.feed }}">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url ~ page.url }}">
     <meta property="og:title" content="{{ metaTitle }}">
     <meta property="og:description" content="{{ metaDescription }}">
-    <meta property="og:image" content="{{ site.logo }}">
+    <meta property="og:image" content="{{ site.url ~ site.logo }}">
     <meta property="og:site_name" content="davidchen.now.sh">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ site.twitter.handle }}">
-    <meta name="twitter:creator" content="{{ site.twitter.handle }}">
+    <meta name="twitter:site" content="{{ site.handles.twitter }}">
+    <meta name="twitter:creator" content="{{ site.handles.twitter }}">
     <meta name="twitter:title" content="{{ metaTitle }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
-    <meta name="twitter:image" content="{{ site.logo }}">
+    <meta name="twitter:image" content="{{ site.url ~ site.logo }}">
 
     <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
   </head>
@@ -76,10 +76,10 @@
       <!--
         <div class="copyright">© David Chen 2020</div>
         <div class="social">
-          <a href="/feed.xml"><img width="16" height="16" src="/assets/img/logo-rss.svg" alt="Atom"></a>
-          <a href="{{ site.twitter.link }}"><img width="16" height="16" src="/assets/img/logo-twitter.svg" alt="Twitter"></a>
-          <a href="{{ site.github.link }}"><img width="16" height="16" src="/assets/img/logo-github.svg" alt="GitHub"></a>
-          <a href="{{ site.linkedin.link }}"><img width="16" height="16" src="/assets/img/logo-linkedin.svg" alt="LinkedIn"></a>
+          <a href="{{ site.feed }}"><img width="16" height="16" src="/assets/img/logo-rss.svg" alt="Atom"></a>
+          <a href="{{ site.links.twitter }}"><img width="16" height="16" src="/assets/img/logo-twitter.svg" alt="Twitter"></a>
+          <a href="{{ site.links.github }}"><img width="16" height="16" src="/assets/img/logo-github.svg" alt="GitHub"></a>
+          <a href="{{ site.links.linkedin }}"><img width="16" height="16" src="/assets/img/logo-linkedin.svg" alt="LinkedIn"></a>
         </div>
       -->
       </footer>
