@@ -1,10 +1,18 @@
+# Don't check in generated files.
 dist/
+src/site/assets/css/*.css
+src/site/assets/css/*.css.map
+src/site/assets/js/*.js
+src/site/assets/js/*.js.map
+
+.DS_STORE
+.vercel
+
 .sass-cache/
 node_modules/
+
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.DS_STORE
-.vercel
