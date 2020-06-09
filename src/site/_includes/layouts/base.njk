@@ -46,9 +46,9 @@
   </head>
 
   <body>
-    <div class="page">
-      <header class="row">
-        <div class="logo">
+    <div class="container">
+      <header class="header row">
+        <div class="header__logo">
           <a href="/" aria-label="Logo">
             <svg
               role="img"
@@ -68,7 +68,7 @@
             </svg>
           </a>
         </div>
-        <nav>
+        <nav class="header__nav">
           <ul>
             <li>
               <a href="/about">about</a>
@@ -79,7 +79,7 @@
           </ul>
         </nav>
       </header>
-      <main class="row">
+      <main class="main row">
         {% block content %}{% endblock %}
       </main>
     </div>
