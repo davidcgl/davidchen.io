@@ -181,19 +181,17 @@ hr {
   padding: $font-size * 2 0 $font-size * 4;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.footer {
   font-size: $font-size * 0.875;
-  padding: $font-size 0 $font-size * 2;
+  border-top: 0.4rem solid $slate02;
+  padding: $font-size * 0.875 0 $font-size * 2;
 
-  > div {
+  &__line {
     margin: 0.5em 0;
   }
 
-  .divider {
-    margin: 0 0.3rem;
+  &__divider {
+    margin: 0 0.2rem;
   }
 
   a {
@@ -218,11 +216,11 @@ footer {
     a {
       color: $grey10;
       text-decoration: none;
-      border-bottom: solid 0.15em rgba($blue02, 0.4);
+      border-bottom: solid 0.2rem rgba($blue02, 0.4);
 
       &:hover {
         text-decoration: none;
-        border-bottom: solid 0.15em $blue02;
+        border-bottom: solid 0.2rem $blue02;
       }
     }
   }

@@ -82,14 +82,16 @@
       <main class="main row">
         {% block content %}{% endblock %}
       </main>
-      <footer class="row">
-        <div>© 2020 {{ site.author.name }}</div>
-        <div>
+      <footer class="footer row">
+        <div class="footer__line">
           <a href="{{ site.links.twitter }}">Twitter</a>
-          <span class="divider">/</span>
+          <span class="footer__divider">/</span>
           <a href="{{ site.links.github }}">GitHub</a>
-          <span class="divider">/</span>
+          <span class="footer__divider">/</span>
           <a href="{{ site.links.linkedin }}">LinkedIn</a>
+        </div>
+        <div class="footer__line">
+          © 2020 {{ site.author.name }}
         </div>
       </footer>
     </div>
