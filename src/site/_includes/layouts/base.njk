@@ -17,11 +17,11 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
 
     <link rel="canonical" href="{{ site.url ~ page.url }}">
     <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="{{ site.feed }}">
-
-    <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -39,7 +39,7 @@
     <meta name="twitter:description" content="{{ metaDescription }}">
     <meta name="twitter:image" content="{{ metaImage or (site.url ~ site.logo)}}">
 
-    <!-- Google structured data -->
+    <!-- Google -->
     {%- if structuredData %}
       {{ structuredData | safe }}
     {%- endif %}
@@ -82,16 +82,6 @@
       <main class="row">
         {% block content %}{% endblock %}
       </main>
-      <footer class="row">
-        <div>© 2020 {{ site.author.name }}</div>
-        <div>
-          <a href="{{ site.links.twitter }}">Twitter</a>
-          <span class="divider">/</span>
-          <a href="{{ site.links.github }}">GitHub</a>
-          <span class="divider">/</span>
-          <a href="{{ site.links.linkedin }}">LinkedIn</a>
-        </div>
-      </footer>
     </div>
   </body>
 </html>
