@@ -111,6 +111,7 @@ hr {
 .container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   padding-left: $page-gutter;
   padding-right: $page-gutter;
 }
@@ -178,6 +179,32 @@ hr {
 .main {
   flex: 1 0 auto;
   padding: $font-size * 2 0 $font-size * 4;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size * 0.875;
+  padding: $font-size 0 $font-size * 2;
+
+  > div {
+    margin: 0.5em 0;
+  }
+
+  .divider {
+    margin: 0 0.3rem;
+  }
+
+  a {
+    display: inline-block;
+    color: $grey10;
+    text-decoration: underline rgba($grey10, 0.4);
+
+    &:hover {
+      text-decoration: underline $grey10;
+    }
+  }
 }
 
 .posts {
