@@ -1,7 +1,45 @@
 {% extends 'layouts/base.njk' %}
 
-{% set metaTitle = title ~ ' — David Chen' %}
-{% set metaDescription = page.excerpt | trim | replace('\n', '') %}
+{% set excerpt = page.excerpt | trim | replace('\n', '') %}
+{% set metaTitle = (title or site.title) ~ ' — David Chen' %}
+{% set metaDescription = excerpt or site.description %}
+{% set metaImage = postImage or (site.url ~ site.logo) %}
+
+{% set structuredData %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "url": "{{ site.url ~ page.url }}",
+      "headline": "{{ title }}",
+      "description": "{{ metaDescription }}",
+      "image": "{{ metaImage }}",
+      "inLanguage": "en-US",
+      "datePublished": "{{ page.date | moment }}",
+      "dateModified": "{{ (modified or page.date) | moment }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}",
+        "url": "{{ site.url }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "width": 400,
+          "height": 400,
+          "url": "{{ site.url ~ site.logo }}"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url ~ page.url }}"
+      }
+    }
+  </script>
+{% endset %}
 
 {% block content %}
 

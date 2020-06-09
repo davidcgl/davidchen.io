@@ -51,7 +51,6 @@ a {
   text-decoration: underline rgba($blue02, 0.4);
 
   &:hover {
-    color: $blue02;
     text-decoration: underline $blue02;
   }
 }
@@ -162,7 +161,7 @@ header {
 
     li {
       display: inline-block;
-      padding-left: $font-size * 2;
+      padding-left: $font-size * 1.5;
     }
 
     a {
@@ -183,34 +182,34 @@ header {
 
 main {
   flex: 1 0 auto;
-  padding: $font-size * 2 0 $font-size * 6;
+  padding: $font-size * 2 0 $font-size * 4;
 }
 
-// footer {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   color: $grey06;
-//   font-size: $font-size * 0.875;
-//   border-top: 0.1rem solid $grey01;
-//   padding: $font-size * 2 0;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size * 0.875;
+  padding: $font-size 0 $font-size * 2;
 
-//   .social {
-//     a {
-//       display: inline-block;
-//       padding: 0.8rem;
-//       margin-left: 0.8rem;
+  > div {
+    margin: 0.5em 0;
+  }
 
-//       &:first-child {
-//         margin-left: 0;
-//       }
-//     }
+  .divider {
+    margin: 0 0.3rem;
+  }
 
-//     img {
-//       display: block;
-//     }
-//   }
-// }
+  a {
+    display: inline-block;
+    color: $grey10;
+    text-decoration: underline rgba($grey10, 0.4);
+
+    &:hover {
+      text-decoration: underline $grey10;
+    }
+  }
+}
 
 .posts {
   list-style: none;

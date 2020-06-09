@@ -1,21 +1,21 @@
 module.exports = {
   title: 'David Chen',
-  description: 'Ramblings by David Chen',
+  description: 'Ramblings by David Chen.',
   url: 'https://davidchen-io.now.sh',
-  logo: 'https://davidchen-io.now.sh/assets/logo/logo-400x400.png',
+  logo: '/assets/logo/logo-padded-400x400.png',
+  feed: '/feed.xml',
   author: {
     name: 'David Chen',
     email: 'me@davidchen.io',
   },
-  twitter: {
-    link: 'https://twitter.com/archenary',
-    handle: '@archenary',
+  handles: {
+    github: 'davidcgl',
+    linkedin: 'davidcgl',
+    twitter: '@archenary',
   },
-  github: {
-    link: 'https://github.com/davidcgl',
-    handle: 'davidcgl',
-  },
-  linkedin: {
-    link: 'https://www.linkedin.com/in/davidcgl',
+  links: {
+    github: 'https://github.com/davidcgl',
+    linkedin: 'https://www.linkedin.com/in/davidcgl',
+    twitter: 'https://twitter.com/archenary',
   },
 };

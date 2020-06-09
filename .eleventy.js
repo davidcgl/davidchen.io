@@ -42,8 +42,8 @@ module.exports = (config) => {
     return content;
   });
 
-  config.addFilter('moment', (date, format) => {
-    return moment(date).format(format);
+  config.addFilter('moment', (date, format = '') => {
+    return moment.utc(date).format(format);
   });
 
   config.addCollection('posts', (collection) => {
