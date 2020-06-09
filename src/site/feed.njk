@@ -11,6 +11,7 @@ eleventyExcludeFromCollections: true
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
+    <uri>{{ site.url ~ '/' }}</uri>
   </author>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <link rel="self" href="{{ site.url ~ site.feed }}"/>
