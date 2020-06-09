@@ -3,7 +3,7 @@
 @import 'variables';
 
 ::selection {
-  background: rgba($yellow01, 0.5);
+  background: $yellow01;
 }
 
 * {
@@ -48,7 +48,7 @@ h6 {
 
 a {
   color: $blue02;
-  text-decoration: underline rgba($blue02, 0.4);
+  text-decoration: underline rgba($blue02, 0.5);
 
   &:hover {
     text-decoration: underline $blue02;
@@ -125,7 +125,7 @@ hr {
 .header {
   display: flex;
   justify-content: space-between;
-  height: 9.6rem;
+  height: 10rem;
 
   &__logo {
     display: flex;
@@ -157,7 +157,7 @@ hr {
 
     li {
       display: inline-block;
-      padding-left: $font-size * 1.5;
+      padding-left: $font-size;
     }
 
     a {
@@ -186,7 +186,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   font-size: $font-size * 0.875;
-  border-top: 0.4rem solid $slate02;
+  border-top: 0.1rem solid $grey01;
   padding: $font-size * 0.875 0 $font-size * 2;
 
   &__block {
@@ -231,7 +231,7 @@ hr {
   &__draft {
     color: $red02;
     background: rgba($red02, 0.2);
-    font-size: $font-size * 0.625;
+    font-size: $font-size * 0.75;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;

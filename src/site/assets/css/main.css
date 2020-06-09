@@ -353,10 +353,10 @@ pre {
   border: 0.1rem solid #e7e7e7;
   background: #f8f9fa;
   font-family: "Fira Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 1.4rem;
+  font-size: 1.575rem;
   border-radius: 0.6rem;
-  padding: 1.6rem;
-  margin: 1.6rem 0;
+  padding: 1.8rem;
+  margin: 1.8rem 0;
   overflow: scroll;
 }
 
@@ -465,7 +465,7 @@ pre > code {
 }
 
 ::selection {
-  background: rgba(255, 221, 89, 0.5);
+  background: #ffdd59;
 }
 
 * {
@@ -478,25 +478,25 @@ html {
 
 body {
   color: #0a0d0f;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Roboto, Ubuntu, sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 1.25;
   margin: 0.5em 0;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   line-height: 1.25;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.25;
 }
 
@@ -510,7 +510,7 @@ h6 {
 
 a {
   color: #3867d6;
-  text-decoration: underline rgba(56, 103, 214, 0.4);
+  text-decoration: underline rgba(56, 103, 214, 0.5);
 }
 
 a:hover {
@@ -524,17 +524,17 @@ i {
 
 ul,
 ol {
-  padding: 0 0 0 3.2rem;
+  padding: 0 0 0 3.6rem;
 }
 
 blockquote {
   color: #6c6e6f;
-  margin: 3.2rem 0;
-  padding: 0 3.2rem;
+  margin: 3.6rem 0;
+  padding: 0 3.6rem;
 }
 
 table {
-  font-size: 1.4rem;
+  font-size: 1.575rem;
   border-spacing: 0;
   border: 0.1rem solid #e7e7e7;
   width: 100%;
@@ -544,7 +544,7 @@ tr th,
 tr td {
   text-align: left;
   vertical-align: top;
-  padding: 0.8rem 1.6rem;
+  padding: 0.9rem 1.8rem;
   border-bottom: 0.1rem solid #e7e7e7;
 }
 
@@ -578,14 +578,14 @@ hr {
 
 .row {
   width: 100%;
-  max-width: 54rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  height: 9.6rem;
+  height: 10rem;
 }
 
 .header__logo {
@@ -619,7 +619,7 @@ hr {
 
 .header__nav li {
   display: inline-block;
-  padding-left: 2.4rem;
+  padding-left: 1.8rem;
 }
 
 .header__nav a {
@@ -638,16 +638,16 @@ hr {
 
 .main {
   flex: 1 0 auto;
-  padding: 3.2rem 0 6.4rem;
+  padding: 3.6rem 0 7.2rem;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
-  border-top: 0.4rem solid #32414d;
-  padding: 1.4rem 0 3.2rem;
+  font-size: 1.575rem;
+  border-top: 0.1rem solid #e7e7e7;
+  padding: 1.575rem 0 3.6rem;
 }
 
 .footer__block {
@@ -692,7 +692,7 @@ hr {
 .posts__draft {
   color: #f53b57;
   background: rgba(245, 59, 87, 0.2);
-  font-size: 1rem;
+  font-size: 1.35rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -706,7 +706,7 @@ hr {
 
 .posts__date {
   color: #6c6e6f;
-  font-size: 1.4rem;
+  font-size: 1.575rem;
   margin-left: 0.5em;
 }
 
