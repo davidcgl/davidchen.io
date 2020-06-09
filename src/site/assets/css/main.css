@@ -350,14 +350,20 @@ template {
 }
 
 pre {
+  font-size: 1.3rem;
   border: 0.1rem solid #e7e7e7;
   background: #f8f9fa;
   font-family: "Fira Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 1.575rem;
   border-radius: 0.6rem;
-  padding: 1.8rem;
-  margin: 1.8rem 0;
+  padding: 1em;
+  margin: 1em 0;
   overflow: scroll;
+}
+
+@media screen and (min-width: 480px) {
+  pre {
+    font-size: 1.5rem;
+  }
 }
 
 pre > code {
@@ -477,27 +483,51 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
   color: #0a0d0f;
-  font-size: 1.8rem;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Roboto, Ubuntu, sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
 
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
 h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 1.25;
   margin: 0.5em 0;
 }
 
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
 h2 {
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   line-height: 1.25;
 }
 
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 2.7rem;
+  }
+}
+
 h3 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.25;
+}
+
+@media screen and (min-width: 480px) {
+  h3 {
+    font-size: 2.25rem;
+  }
 }
 
 h2,
@@ -524,27 +554,33 @@ i {
 
 ul,
 ol {
-  padding: 0 0 0 3.6rem;
+  padding: 0 0 0 2em;
 }
 
 blockquote {
   color: #6c6e6f;
-  margin: 3.6rem 0;
-  padding: 0 3.6rem;
+  margin: 2em 0;
+  padding: 0 2em;
 }
 
 table {
-  font-size: 1.575rem;
+  font-size: 1.3rem;
   border-spacing: 0;
   border: 0.1rem solid #e7e7e7;
   width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  table {
+    font-size: 1.5rem;
+  }
 }
 
 tr th,
 tr td {
   text-align: left;
   vertical-align: top;
-  padding: 0.9rem 1.8rem;
+  padding: 0.5em 1em;
   border-bottom: 0.1rem solid #e7e7e7;
 }
 
@@ -619,7 +655,7 @@ hr {
 
 .header__nav li {
   display: inline-block;
-  padding-left: 1.8rem;
+  padding-left: 1em;
 }
 
 .header__nav a {
@@ -638,20 +674,31 @@ hr {
 
 .main {
   flex: 1 0 auto;
-  padding: 3.6rem 0 7.2rem;
+  padding: 2rem 0 6rem;
 }
 
 .footer {
+  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.575rem;
+  flex-wrap: wrap;
   border-top: 0.1rem solid #e7e7e7;
-  padding: 1.575rem 0 3.6rem;
+  padding: 1em 0 2em;
 }
 
-.footer__block {
-  margin: 0.5em 0;
+@media screen and (min-width: 480px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+}
+
+.footer__copyright {
+  margin: 0.25em 2em 0.25em 0;
+}
+
+.footer__links {
+  margin: 0.25em 0;
 }
 
 .footer__divider {
@@ -692,7 +739,7 @@ hr {
 .posts__draft {
   color: #f53b57;
   background: rgba(245, 59, 87, 0.2);
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -705,9 +752,15 @@ hr {
 }
 
 .posts__date {
+  font-size: 1.3rem;
   color: #6c6e6f;
-  font-size: 1.575rem;
   margin-left: 0.5em;
+}
+
+@media screen and (min-width: 480px) {
+  .posts__date {
+    font-size: 1.5rem;
+  }
 }
 
 .post__date {

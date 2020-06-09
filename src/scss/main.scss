@@ -15,26 +15,26 @@ html {
 }
 
 body {
+  @include font-size($base-font-sizes);
   color: $grey10;
-  font-size: $font-size;
   font-family: $font-stack;
   font-weight: normal;
   line-height: 1.5;
 }
 
 h1 {
-  font-size: $font-size * 2.5;
+  @include font-size($h1-font-sizes);
   line-height: 1.25;
   margin: 0.5em 0;
 }
 
 h2 {
-  font-size: $font-size * 1.5;
+  @include font-size($h2-font-sizes);
   line-height: 1.25;
 }
 
 h3 {
-  font-size: $font-size * 1.25;
+  @include font-size($h3-font-sizes);
   line-height: 1.25;
 }
 
@@ -62,17 +62,17 @@ i {
 
 ul,
 ol {
-  padding: 0 0 0 ($font-size * 2);
+  padding: 0 0 0 2em;
 }
 
 blockquote {
   color: $grey06;
-  margin: ($font-size * 2) 0;
-  padding: 0 ($font-size * 2);
+  margin: 2em 0;
+  padding: 0 2em;
 }
 
 table {
-  font-size: $font-size * 0.875;
+  @include font-size($small-font-sizes);
   border-spacing: 0;
   border: 0.1rem solid $grey01;
   width: 100%;
@@ -83,7 +83,7 @@ tr {
   td {
     text-align: left;
     vertical-align: top;
-    padding: $font-size * 0.5 $font-size;
+    padding: 0.5em 1em;
     border-bottom: 0.1rem solid $grey01;
   }
 
@@ -157,7 +157,7 @@ hr {
 
     li {
       display: inline-block;
-      padding-left: $font-size;
+      padding-left: 1em;
     }
 
     a {
@@ -178,19 +178,25 @@ hr {
 
 .main {
   flex: 1 0 auto;
-  padding: $font-size * 2 0 $font-size * 4;
+  padding: 2rem 0 6rem;
 }
 
 .footer {
+  @include font-size($small-font-sizes);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: $font-size * 0.875;
+  flex-wrap: wrap;
   border-top: 0.1rem solid $grey01;
-  padding: $font-size * 0.875 0 $font-size * 2;
+  padding: 1em 0 2em;
 
-  &__block {
-    margin: 0.5em 0;
+  &__copyright {
+    margin: 0.25em 2em 0.25em 0;
+  }
+
+  &__links {
+    margin: 0.25em 0;
   }
 
   &__divider {
@@ -231,7 +237,7 @@ hr {
   &__draft {
     color: $red02;
     background: rgba($red02, 0.2);
-    font-size: $font-size * 0.75;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -244,8 +250,8 @@ hr {
   }
 
   &__date {
+    @include font-size($small-font-sizes);
     color: $grey06;
-    font-size: $font-size * 0.875;
     margin-left: 0.5em;
   }
 }
