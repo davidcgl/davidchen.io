@@ -83,15 +83,15 @@
         {% block content %}{% endblock %}
       </main>
       <footer class="footer row">
-        <div class="footer__line">
+        <div class="footer__block">
+          © 2020 {{ site.author.name }}
+        </div>
+        <div class="footer__block">
           <a href="{{ site.links.twitter }}">Twitter</a>
           <span class="footer__divider">/</span>
           <a href="{{ site.links.github }}">GitHub</a>
           <span class="footer__divider">/</span>
           <a href="{{ site.links.linkedin }}">LinkedIn</a>
-        </div>
-        <div class="footer__line">
-          © 2020 {{ site.author.name }}
         </div>
       </footer>
     </div>

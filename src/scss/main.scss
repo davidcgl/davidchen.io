@@ -182,11 +182,14 @@ hr {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: $font-size * 0.875;
   border-top: 0.4rem solid $slate02;
   padding: $font-size * 0.875 0 $font-size * 2;
 
-  &__line {
+  &__block {
     margin: 0.5em 0;
   }
 
