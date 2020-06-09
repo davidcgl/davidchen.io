@@ -20,7 +20,6 @@ function buildCss() {
       .src('src/scss/main.scss')
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(size({ title: 'original', showFiles: true }))
-      .pipe(gulp.dest(SITE_CSS_DIR))
 
       // Create a source map for the minified CSS.
       .pipe(sourcemaps.init())

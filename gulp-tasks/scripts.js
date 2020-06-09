@@ -13,24 +13,14 @@ async function buildJs() {
     plugins: [nodeResolve(), commonjs()],
   });
 
-  return Promise.all([
-    bundle.write({
-      dir: SITE_JS_DIR,
-      entryFileNames: '[name].js',
-      format: 'iife',
-      name: 'Main',
-      sourcemap: false,
-      plugins: [],
-    }),
-    bundle.write({
-      dir: SITE_JS_DIR,
-      entryFileNames: '[name]-[hash].min.js',
-      format: 'iife',
-      name: 'Main',
-      sourcemap: true,
-      plugins: [terser()],
-    }),
-  ]);
+  return bundle.write({
+    dir: SITE_JS_DIR,
+    entryFileNames: '[name]-[hash].min.js',
+    format: 'iife',
+    name: 'Main',
+    sourcemap: true,
+    plugins: [terser()],
+  });
 }
 
 function cleanJs() {
