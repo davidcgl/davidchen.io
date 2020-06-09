@@ -20,9 +20,9 @@
 
     <link rel="canonical" href="{{ site.url ~ page.url }}">
     <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="{{ site.feed }}">
-    
+
     <script defer src="{{ '/assets/js/' ~ manifest['main.min.js'] }}"></script>
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url ~ page.url }}">
@@ -80,15 +80,14 @@
         {% block content %}{% endblock %}
       </main>
       <footer class="row">
-      <!--
-        <div class="copyright">© David Chen 2020</div>
-        <div class="social">
-          <a href="{{ site.feed }}"><img width="16" height="16" src="/assets/img/logo-rss.svg" alt="Atom"></a>
-          <a href="{{ site.links.twitter }}"><img width="16" height="16" src="/assets/img/logo-twitter.svg" alt="Twitter"></a>
-          <a href="{{ site.links.github }}"><img width="16" height="16" src="/assets/img/logo-github.svg" alt="GitHub"></a>
-          <a href="{{ site.links.linkedin }}"><img width="16" height="16" src="/assets/img/logo-linkedin.svg" alt="LinkedIn"></a>
+        <div>© 2020 {{ site.author.name }}</div>
+        <div>
+          <a href="{{ site.links.twitter }}">Twitter</a>
+          <span class="divider">/</span>
+          <a href="{{ site.links.github }}">GitHub</a>
+          <span class="divider">/</span>
+          <a href="{{ site.links.linkedin }}">LinkedIn</a>
         </div>
-      -->
       </footer>
     </div>
   </body>

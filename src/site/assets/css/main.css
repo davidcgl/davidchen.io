@@ -514,7 +514,6 @@ a {
 }
 
 a:hover {
-  color: #3867d6;
   text-decoration: underline #3867d6;
 }
 
@@ -643,7 +642,33 @@ header nav a:hover {
 
 main {
   flex: 1 0 auto;
-  padding: 3.2rem 0 9.6rem;
+  padding: 3.2rem 0 6.4rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1.6rem 0 3.2rem;
+}
+
+footer > div {
+  margin: 0.5em 0;
+}
+
+footer .divider {
+  margin: 0 0.3rem;
+}
+
+footer a {
+  display: inline-block;
+  color: #0a0d0f;
+  text-decoration: underline rgba(10, 13, 15, 0.4);
+}
+
+footer a:hover {
+  text-decoration: underline #0a0d0f;
 }
 
 .posts {
