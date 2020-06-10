@@ -2,10 +2,13 @@
 
 // Inline code.
 :not(pre) > code {
+  @include font-size($small-font-sizes);
   font-family: $font-stack-mono;
   background: $background-light;
-  border-radius: 0.2rem;
-  padding: 0 0.05em;
+  border: 0.1rem solid $grey01;
+  border-radius: 0.4rem;
+  padding: 0.1em 0.05em;
+  margin: 0 0.1em;
 
   &:before,
   &:after {
@@ -16,8 +19,10 @@
 
 pre {
   @include font-size($small-font-sizes);
-  background: $background-light;
   font-family: $font-stack-mono;
+  background: $background-light;
+  border: 0.1rem solid $grey01;
+  border-radius: 0.8rem;
   padding: 1em;
   margin: 1em 0;
   overflow: scroll;
@@ -100,7 +105,7 @@ pre > code {
 .token.pseudo-class,
 .token.pseudo-element,
 .token.url-reference .token.variable {
-  color: #6f42c1;
+  color: #6c37cd;
 }
 
 .token.entity {
