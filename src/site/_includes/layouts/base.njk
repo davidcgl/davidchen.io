@@ -12,6 +12,11 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ '/assets/css/' ~ manifest['main.min.css'] }}">
 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -46,16 +51,16 @@
   </head>
 
   <body>
-    <div class="page">
-      <header class="row">
-        <div class="logo">
+    <div class="container">
+      <header class="header row">
+        <div class="header__logo">
           <a href="/" aria-label="Logo">
             <svg
               role="img"
               aria-hidden="true"
               focusable="false"
-              width="36"
-              height="36"
+              width="32"
+              height="32"
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -68,27 +73,28 @@
             </svg>
           </a>
         </div>
-        <nav>
+        <nav class="header__nav">
           <ul>
             <li>
               <a href="/about">about</a>
             </li>
-            <li>
-              <a href="{{ site.feed }}">rss</a>
-            </li>
           </ul>
         </nav>
       </header>
-      <main class="row">
+      <main class="main row">
         {% block content %}{% endblock %}
       </main>
-      <footer class="row">
-        <div>© 2020 {{ site.author.name }}</div>
-        <div>
+      <footer class="footer row">
+        <div class="footer__copyright">
+          © 2020 {{ site.author.name }}
+        </div>
+        <div class="footer__links">
+          <a href="{{ site.feed }}">RSS</a>
+          <span class="footer__divider">/</span>
           <a href="{{ site.links.twitter }}">Twitter</a>
-          <span class="divider">/</span>
+          <span class="footer__divider">/</span>
           <a href="{{ site.links.github }}">GitHub</a>
-          <span class="divider">/</span>
+          <span class="footer__divider">/</span>
           <a href="{{ site.links.linkedin }}">LinkedIn</a>
         </div>
       </footer>
