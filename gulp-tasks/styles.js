@@ -32,10 +32,11 @@ function buildCss() {
       // Example: main.min.css -> main-b3e3e0f222.min.css
       .pipe(rev())
       .pipe(size({ title: 'minified', showFiles: true }))
-      .pipe(gulp.dest(SITE_CSS_DIR))
 
-      // Write source map to src/site/assets/css.
+      // Write source map to the same directory as the minified css file.
       .pipe(sourcemaps.write('.'))
+
+      // Write to src/site/assets/css/
       .pipe(gulp.dest(SITE_CSS_DIR))
   );
 }
