@@ -3,6 +3,7 @@ module.exports = {
   description: 'Ramblings by David Chen.',
   url: 'https://davidchen-io.now.sh',
   logo: '/assets/logo/logo-padded-400x400.png',
+  blog: '/blog',
   feed: '/feed.xml',
   author: {
     name: 'David Chen',

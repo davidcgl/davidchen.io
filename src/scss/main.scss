@@ -16,42 +16,38 @@ html {
 
 body {
   @include font-size($base-font-sizes);
-  color: $grey10;
-  font-family: $font-stack;
-  font-weight: normal;
+  color: $slate05;
+  font-family: $font-stack-sans;
   line-height: 1.5;
 }
 
 h1 {
   @include font-size($h1-font-sizes);
+  color: #000;
   line-height: 1.25;
   margin: 0.5em 0;
 }
 
 h2 {
   @include font-size($h2-font-sizes);
+  color: #000;
   line-height: 1.25;
+  margin: 2em 0 0.5em;
 }
 
 h3 {
   @include font-size($h3-font-sizes);
+  color: #000;
   line-height: 1.25;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
   margin: 2em 0 0.5em;
 }
 
 a {
-  color: $blue02;
-  text-decoration: underline rgba($blue02, 0.5);
+  color: $link-color;
+  text-decoration: underline rgba($link-color, 0.5);
 
   &:hover {
-    text-decoration: underline $blue02;
+    text-decoration: underline $link-color;
   }
 }
 
@@ -66,7 +62,8 @@ ol {
 }
 
 blockquote {
-  color: $grey06;
+  color: $slate04;
+  border-left: 0.2em solid $blue02;
   margin: 2em 0;
   padding: 0 2em;
 }
@@ -74,7 +71,7 @@ blockquote {
 table {
   @include font-size($small-font-sizes);
   border-spacing: 0;
-  border: 0.1rem solid $grey01;
+  border: 0.1rem solid $slate01;
   width: 100%;
 }
 
@@ -84,11 +81,11 @@ tr {
     text-align: left;
     vertical-align: top;
     padding: 0.5em 1em;
-    border-bottom: 0.1rem solid $grey01;
+    border-bottom: 0.1rem solid $slate01;
   }
 
   th {
-    background: $background-light;
+    background: $light-bg;
     font-weight: normal;
   }
 
@@ -105,34 +102,17 @@ img {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 0.1rem solid $grey01;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-left: $page-gutter;
-  padding-right: $page-gutter;
-}
-
-.row {
-  width: 100%;
-  max-width: $page-width;
-  margin: 0 auto;
+  border-bottom: 0.1rem solid $slate01;
 }
 
 .header {
+  @include page-layout;
+
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   height: 10rem;
 
   &__logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 0 0 auto;
-
     a,
     a:hover {
       display: block;
@@ -142,124 +122,94 @@ hr {
       display: block;
     }
   }
-
-  &__nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 0 0 auto;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      display: inline-block;
-      padding-left: 1em;
-    }
-
-    a {
-      display: block;
-      color: $grey06;
-      font-weight: bold;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      &:hover {
-        color: $grey10;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 .main {
-  flex: 1 0 auto;
-  padding: 2rem 0 6rem;
+  @include page-layout;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 
-.footer {
-  @include font-size($small-font-sizes);
+.hero {
+  max-width: 42rem;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 0.1rem solid $grey01;
-  padding: 1.5em 0 3em;
-
-  &__copyright {
-    margin: 0.25em 2em 0.25em 0;
+  &__blurb {
+    margin-bottom: 1.25em;
   }
 
   &__links {
-    margin: 0.25em 0;
-
     a {
-      display: inline-block;
-      color: $grey10;
-      text-decoration: underline rgba($grey10, 0.4);
+      @include font-size($base-font-sizes);
+      color: $slate05;
+      text-decoration: none;
+      border-bottom: solid 0.2rem rgba($link-color, 0.5);
 
       &:hover {
-        text-decoration: underline $grey10;
+        text-decoration: none;
+        border-bottom: solid 0.2rem $link-color;
       }
     }
   }
 
   &__divider {
-    margin: 0 0.2rem;
+    margin: 0 0.1em;
   }
 }
 
 .posts {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  a {
+    @include font-size($base-font-sizes);
+    color: $slate05;
+    text-decoration: none;
+    border-bottom: solid 0.2rem rgba($link-color, 0.5);
 
-  li {
-    margin: 1em 0;
-
-    a {
-      color: $grey10;
+    &:hover {
       text-decoration: none;
-      border-bottom: solid 0.2rem rgba($blue02, 0.4);
-
-      &:hover {
-        text-decoration: none;
-        border-bottom: solid 0.2rem $blue02;
-      }
+      border-bottom: solid 0.2rem $link-color;
     }
-  }
-
-  &__draft {
-    color: $red02;
-    background: rgba($red02, 0.2);
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    border-radius: 0.8em;
-    padding: 0.2em 0.8em;
-    margin-left: 0.2em;
-    position: relative;
-    left: 0;
-    bottom: 0.2em;
   }
 
   &__date {
     @include font-size($small-font-sizes);
-    color: $grey06;
-    margin-left: 0.5em;
+    color: $slate04;
+    margin-left: 0.4em;
   }
 }
 
 .post {
   &__date {
     display: block;
-    color: $grey06;
+    color: $slate04;
     margin: 2em 0 1em;
+  }
+}
+
+.footer {
+  color: $footer-fg;
+  background: $footer-bg;
+
+  a {
+    color: $footer-link-color;
+    text-decoration: underline rgba($footer-link-color, 0.5);
+
+    &:hover {
+      text-decoration: underline $footer-link-color; 
+    }
+  }
+
+  &__inner {
+    @include page-layout;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  &__blurb,
+  &__copyright,
+  &__links {
+    margin: 1em 0;
+  }
+
+  &__divider {
+    margin: 0 0.1em;
   }
 }
