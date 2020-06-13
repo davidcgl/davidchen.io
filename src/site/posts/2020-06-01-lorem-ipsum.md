@@ -24,7 +24,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel imperdiet
 leo. Morbi posuere ullamcorper libero, convallis elementum erat accumsan vel.
 Praesent mattis tincidunt ex, eu malesuada tellus lacinia et.
 
-
 This is my `.eleventy` config.
 
 ```js
