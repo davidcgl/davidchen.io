@@ -113,12 +113,7 @@ hr {
   height: 5em;
 
   &__logo {
-    a,
-    a:hover {
-      display: block;
-    }
-
-    svg {
+    a, svg {
       display: block;
     }
   }
