@@ -1,7 +1,7 @@
 module.exports = {
   title: 'David Chen',
   description: 'Ramblings by David Chen.',
-  url: 'https://davidchen-io.vercel.app',
+  url: 'https://davidchen-io.now.sh',
   logo: '/assets/logo/logo-padded-400x400.png',
   blog: '/blog',
   feed: '/feed.xml',
