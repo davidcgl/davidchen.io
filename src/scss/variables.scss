@@ -1,13 +1,3 @@
-$grey01: #e7e7e7;
-$grey02: #cecfcf;
-$grey03: #b6b6b7;
-$grey04: #9d9e9f;
-$grey05: #858687;
-$grey06: #6c6e6f; // contrast ratio 5.13 on white bg
-$grey07: #545657;
-$grey08: #3b3d3f;
-$grey09: #232527;
-$grey10: #0a0d0f;
 $red01: #ef5777;
 $red02: #f53b57;
 $blue01: #4b7bec;
@@ -20,52 +10,65 @@ $yellow01: #ffdd59;
 $yellow02: #ffd32a;
 $orange01: #ffc048;
 $orange02: #ffa801;
-$slate01: #5b768b;
-$slate02: #32414d;
+$slate01: #ebeced;
+$slate02: #c2c6ca;
+$slate03: #99a0a6;
+$slate04: #5b6771;
+$slate05: #32414d;
 
-$background-light: #f6f8fa;
+$footer-bg: #1a253c;
+$footer-fg: #bbb8b4;
+$footer-link-color: #6b8ee1;
 
-$page-width: 60rem; // 70-75 characters per line for 18px IBM Plex Sans
+$link-color: $blue02;
+$light-bg: #f6f8fa;
+
+$page-width: 64rem; // 65-75 characters for 18px Fira Sans
 $page-gutter: 2rem;
 
-$font-stack: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  'Helvetica Neue', Roboto, Ubuntu, sans-serif;
-$font-stack-mono: 'Fira Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+$font-stack-sans: 'Fira Sans', sans-serif;
+$font-stack-mono: 'Fira Mono', monospace;
 
 $base-font-sizes: (
-  null: 1.6rem,
+  default: 1.6rem,
   480px: 1.8rem,
 );
 
 $small-font-sizes: (
-  null: 1.3rem,
+  default: 1.3rem,
   480px: 1.5rem,
 );
 
 $h1-font-sizes: (
-  null: 4rem,
+  default: 4rem,
   480px: 4.5rem,
 );
 
 $h2-font-sizes: (
-  null: 2.4rem,
+  default: 2.4rem,
   480px: 2.7rem,
 );
 
 $h3-font-sizes: (
-  null: 2rem,
-  480px: 2.25rem,
+  default: 1.6rem,
+  480px: 1.8rem,
 );
 
 @mixin font-size($fs-map) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint == null {
+    @if $fs-breakpoint == default {
       font-size: $fs-font-size;
-    }
-    @else {
+    } @else {
       @media screen and (min-width: $fs-breakpoint) {
         font-size: $fs-font-size;
       }
     }
   }
+}
+
+@mixin page-layout {
+  width: 100%;
+  max-width: $page-width;
+  padding: 0 $page-gutter;
+  margin: 0 auto;
 }

@@ -5,24 +5,37 @@ permalink: index.html
 {% extends 'layouts/base.njk' %}
 
 {% set metaTitle = site.title %}
-{% set metaDescription = site.description %}
+{% set metaDescription = 'David Chen is a software engineer living in the San Francisco Bay Area.' %}
 
-{% block content %}
+{% block main %}
 
-  <h1>Blog</h1>
+  <h1>David Chen</h1>
 
-  <ul class="posts">
-    {%- for post in collections.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-        <time class="posts__date" datetime="{{ post.date | moment('YYYY-MM-DD') }}">
-          {{ post.date | moment('MMMM D, YYYY') }}
-        </time>
-        {% if post.data.draft %}
-          <span class="posts__draft">Draft</span>
-        {% endif %}
-      </li>
-    {%- endfor %}
-  </ul>
+  <div class="hero">
+    <div class="hero__blurb">
+      <p>
+        Hello! I'm a software engineer living in the San Francisco Bay Area.
+        This site is dedicated to my creative interests and whims. I enjoy
+        programming, and sometimes <a href="{{ site.blog }}">write about it</a>.
+      </p>
+      <p>
+        I currently work at <a href="https://stripe.com">Stripe</a>. Previously,
+        I've also worked at Google and Amazon. If you want to say hello, my
+        email address is <a href="mailto:{{site.author.email }}">{{ site.author.email }}</a>.
+      </p>
+    </div>
+
+    <div class="hero__links">
+      <a href="{{ site.blog }}">Blog</a>
+      <span class="hero__divider">/</span>
+      <a href="{{ site.feed }}">RSS</a>
+      <span class="hero__divider">/</span>
+      <a href="{{ site.links.twitter }}">Twitter</a>
+      <span class="hero__divider">/</span>
+      <a href="{{ site.links.github }}">GitHub</a>
+      <span class="hero__divider">/</span>
+      <a href="{{ site.links.linkedin }}">LinkedIn</a>
+    </div>
+  </div>
 
 {% endblock %}

@@ -4,9 +4,8 @@
 :not(pre) > code {
   @include font-size($small-font-sizes);
   font-family: $font-stack-mono;
-  background: $background-light;
-  border: 0.1rem solid $grey01;
-  border-radius: 0.4rem;
+  background: $light-bg;
+  border: 0.1rem solid $slate01;
   padding: 0.1em 0.05em;
   margin: 0 0.1em;
 
@@ -20,16 +19,15 @@
 pre {
   @include font-size($small-font-sizes);
   font-family: $font-stack-mono;
-  background: $background-light;
-  border: 0.1rem solid $grey01;
-  border-radius: 0.8rem;
+  background: $light-bg;
+  border: 0.1rem solid $slate01;
   padding: 1em;
   margin: 1em 0;
   overflow: scroll;
 }
 
 pre > code {
-  color: $grey10;
+  color: $slate05;
   font-family: $font-stack-mono;
   text-align: left;
   white-space: pre;
@@ -53,7 +51,7 @@ pre > code {
 .token.macro.property,
 .token.punctuation,
 .token.variable {
-  color: $grey10;
+  color: $slate05;
 }
 
 .token.blockquote,
