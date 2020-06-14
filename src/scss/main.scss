@@ -110,7 +110,7 @@ hr {
 
   display: flex;
   align-items: center;
-  height: 10rem;
+  height: 5em;
 
   &__logo {
     a,
@@ -126,12 +126,12 @@ hr {
 
 .main {
   @include page-layout;
-  padding-top: 2rem;
-  padding-bottom: 6rem;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
 
 .hero {
-  max-width: 42rem;
+  max-width: 25em;
 
   &__blurb {
     margin-bottom: 1.25em;
