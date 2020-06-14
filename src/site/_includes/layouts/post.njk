@@ -1,9 +1,8 @@
 {% extends 'layouts/base.njk' %}
 
-{% set excerpt = page.excerpt | trim | replace('\n', '') %}
 {% set metaTitle = (title or site.title) ~ ' — David Chen' %}
-{% set metaDescription = excerpt or site.description %}
-{% set metaImage = postImage or(site.url ~ site.logo) %}
+{% set metaDescription = (subtitle or site.description) | trim | replace ('\n', '') %}
+{% set metaImage = image or (site.url ~ site.logo) %}
 
 {% set structuredData %}
 <script type="application/ld+json">
