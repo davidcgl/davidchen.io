@@ -53,6 +53,13 @@ module.exports = (config) => {
       .reverse();
   });
 
+  config.addCollection('sitemap', (collection) => {
+    const now = new Date();
+    return collection
+      .getAll()
+      .filter((item) => item.date <= now && !item.data.draft);
+  });
+
   config.addPassthroughCopy('src/site/assets');
   config.addPassthroughCopy('src/site/apple-touch-icon.png');
   config.addPassthroughCopy('src/site/favicon-16x16.png');
