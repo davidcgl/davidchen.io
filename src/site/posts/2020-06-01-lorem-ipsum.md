@@ -1,9 +1,10 @@
 ---
 title: Lorem Ipsum
+draft: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel pretium
-risus, eu laoreet lectus.<!-- excerpt --> Vivamus [vitae diam](/) nec justo
+risus, eu laoreet lectus. Vivamus [vitae diam](/) nec justo
 malesuada dignissim eleifend sed orci. Maecenas leo turpis, tempor ac
 vestibulum sit amet, ultrices quis ante. Vestibulum justo nisl, venenatis
 eget rutrum scelerisque, ullamcorper nec urna.
@@ -33,11 +34,6 @@ const moment = require('moment');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = (config) => {
-  config.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_separator: '<!-- excerpt -->',
-  });
-
   config.setLibrary(
     'md',
     markdownIt({
