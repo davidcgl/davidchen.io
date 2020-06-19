@@ -7,7 +7,7 @@ module.exports = {
   feed: '/feed.xml',
   author: {
     name: 'David Chen',
-    email: 'me@davidchen.io',
+    email: 'hello@davidchen.io',
   },
   handles: {
     github: 'davidcgl',
