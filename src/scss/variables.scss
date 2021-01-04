@@ -16,42 +16,41 @@ $slate03: #99a0a6;
 $slate04: #5b6771;
 $slate05: #32414d;
 
-$footer-bg: #1a253c;
-$footer-fg: #bbb8b4;
-$footer-link-color: #6b8ee1;
+$color-bg: #fffef2;
+$color-bg-light: #fff;
+$color-fg: $slate05;
+$color-fg-light: $slate04;
 
-$link-color: $blue02;
-$light-bg: #f6f8fa;
-
-$page-width: 64rem; // 65-75 characters for 18px Fira Sans
+$page-width: 56rem; // 70-75 characters for 16px neue-haas-unica
 $page-gutter: 2rem;
 
-$font-stack-sans: 'Fira Sans', sans-serif;
-$font-stack-mono: 'Fira Mono', monospace;
+$font-stack-title: orpheuspro, serif;
+$font-stack-body: neue-haas-unica, sans-serif;
+$font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
 $base-font-sizes: (
   default: 1.6rem,
-  480px: 1.8rem,
+  480px: 1.6rem,
 );
 
 $small-font-sizes: (
-  default: 1.3rem,
-  480px: 1.5rem,
+  default: 1.4rem,
+  480px: 1.4rem,
 );
 
 $h1-font-sizes: (
-  default: 4rem,
-  480px: 4.5rem,
+  default: 3.6rem,
+  480px: 3.6rem,
 );
 
 $h2-font-sizes: (
   default: 2.4rem,
-  480px: 2.7rem,
+  480px: 2.4rem,
 );
 
 $h3-font-sizes: (
-  default: 1.6rem,
-  480px: 1.8rem,
+  default: 2rem,
+  480px: 2rem,
 );
 
 @mixin font-size($fs-map) {
