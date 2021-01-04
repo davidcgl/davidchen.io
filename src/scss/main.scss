@@ -16,8 +16,10 @@ html {
 
 body {
   @include font-size($base-font-sizes);
-  color: $slate05;
-  font-family: $font-stack-sans;
+  background: $color-bg;
+  color: $color-fg;
+  font-family: $font-stack-body;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -42,12 +44,15 @@ h3 {
   margin: 2em 0 0.5em;
 }
 
+h4, h5, h6 {
+  color: #000;
+}
+
 a {
-  color: $link-color;
-  text-decoration: underline rgba($link-color, 0.5);
+  color: $color-fg;
 
   &:hover {
-    text-decoration: underline $link-color;
+    color: $blue02;
   }
 }
 
@@ -62,8 +67,8 @@ ol {
 }
 
 blockquote {
-  color: $slate04;
-  border-left: 0.2em solid $blue02;
+  color: $color-fg-light;
+  border-left: 0.2em solid $color-fg;
   margin: 2em 0;
   padding: 0 2em;
 }
@@ -85,7 +90,7 @@ tr {
   }
 
   th {
-    background: $light-bg;
+    background: $color-bg-light;
     font-weight: normal;
   }
 
@@ -119,6 +124,11 @@ hr {
   }
 }
 
+.title {
+  font-family: $font-stack-title;
+  font-weight: 500;
+}
+
 .main {
   @include page-layout;
   padding-top: 1.5em;
@@ -126,8 +136,6 @@ hr {
 }
 
 .hero {
-  max-width: 25em;
-
   &__blurb {
     margin-bottom: 1.25em;
   }
@@ -135,13 +143,13 @@ hr {
   &__links {
     a {
       @include font-size($base-font-sizes);
-      color: $slate05;
+      color: $color-fg;
       text-decoration: none;
-      border-bottom: solid 0.2rem rgba($link-color, 0.5);
+      border-bottom: solid 0.2rem rgba($color-fg-light, 0.5);
 
       &:hover {
         text-decoration: none;
-        border-bottom: solid 0.2rem $link-color;
+        border-bottom: solid 0.2rem $blue02;
       }
     }
   }
@@ -154,19 +162,19 @@ hr {
 .posts {
   a {
     @include font-size($base-font-sizes);
-    color: $slate05;
+    color: $color-fg;
     text-decoration: none;
-    border-bottom: solid 0.2rem rgba($link-color, 0.5);
+    border-bottom: solid 0.2rem rgba($color-fg, 0.5);
 
     &:hover {
       text-decoration: none;
-      border-bottom: solid 0.2rem $link-color;
+      border-bottom: solid 0.2rem $blue02;
     }
   }
 
   &__date {
     @include font-size($small-font-sizes);
-    color: $slate04;
+    color: $color-fg-light;
     margin-left: 0.4em;
   }
 }
@@ -174,37 +182,7 @@ hr {
 .post {
   &__date {
     display: block;
-    color: $slate04;
+    color: $color-fg-light;
     margin: 2em 0 1em;
-  }
-}
-
-.footer {
-  color: $footer-fg;
-  background: $footer-bg;
-
-  a {
-    color: $footer-link-color;
-    text-decoration: underline rgba($footer-link-color, 0.5);
-
-    &:hover {
-      text-decoration: underline $footer-link-color;
-    }
-  }
-
-  &__inner {
-    @include page-layout;
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-
-  &__blurb,
-  &__copyright,
-  &__links {
-    margin: 1em 0;
-  }
-
-  &__divider {
-    margin: 0 0.1em;
   }
 }

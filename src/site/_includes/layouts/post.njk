@@ -1,7 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% set metaTitle = (title or site.title) ~ ' — David Chen' %}
-{% set metaDescription = (subtitle or site.description) | trim | replace ('\n', '') %}
+{% set metaDescription = (subtitle or site.description) | trim | replace('\n', '') %}
 {% set metaImage = image or (site.url ~ site.logo) %}
 
 {% set structuredData %}
@@ -42,34 +42,10 @@
 
 {% block main %}
   <article class="post">
-    <h1>{{ title }}</h1>
+    <h1 class="title">{{ title }}</h1>
     <time class="post__date" datetime="{{ page.date | moment('YYYY-MM-DD') }}">
       {{ page.date | moment('MMMM D, YYYY') }}
     </time>
     {{ content | safe }}
   </article>
-{% endblock %}
-
-{% block footer %}
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__blurb">
-        I'm <a href="/">David Chen</a>, a software engineer living in the San
-        Francisco Bay Area. I enjoy programming, and sometimes
-        <a href="{{ site.blog }}">write about it</a>.
-        If you want to say hello, my email address is
-        <a href="mailto:{{site.author.email }}">{{ site.author.email }}</a>.
-      </div>
-      <div class="footer__links">
-        <a href="{{ site.feed }}">RSS</a>
-        <span class="footer__divider">/</span>
-        <a href="{{ site.links.twitter }}">Twitter</a>
-        <span class="footer__divider">/</span>
-        <a href="{{ site.links.github }}">GitHub</a>
-        <span class="footer__divider">/</span>
-        <a href="{{ site.links.linkedin }}">LinkedIn</a>
-      </div>
-      <div class="footer__copyright">© 2020 David Chen</div>
-    </div>
-  </footer>
 {% endblock %}
