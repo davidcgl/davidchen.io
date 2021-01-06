@@ -16,19 +16,12 @@ $slate03: #99a0a6;
 $slate04: #5b6771;
 $slate05: #32414d;
 
-$color-bg: #fffef2;
-$color-bg-light: #fff;
-$color-fg: $slate05;
-$color-fg-light: $slate04;
-
 $page-width: 56rem; // 70-75 characters for 16px neue-haas-unica
 $page-gutter: 2rem;
 
 $font-stack-title: orpheuspro, Georgia, serif;
-$font-stack-body: neue-haas-unica, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, Helvetica, Arial, sans-serif;
-$font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-  monospace;
+$font-stack-body: neue-haas-unica, Helvetica, Arial, Roboto, sans-serif;
+$font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
 $base-font-sizes: (
   default: 1.6rem,
@@ -36,8 +29,8 @@ $base-font-sizes: (
 );
 
 $small-font-sizes: (
-  default: 1.4rem,
-  480px: 1.4rem,
+  default: 1.26rem,
+  480px: 1.26rem,
 );
 
 $h1-font-sizes: (
