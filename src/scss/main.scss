@@ -16,8 +16,8 @@ html {
 
 body {
   @include font-size($base-font-sizes);
-  background: $color-bg;
-  color: $color-fg;
+  background: $background;
+  color: $slate05;
   font-family: $font-stack-body;
   font-weight: 400;
   line-height: 1.5;
@@ -49,7 +49,7 @@ h4, h5, h6 {
 }
 
 a {
-  color: $color-fg;
+  color: $slate05;
 
   &:hover {
     color: $blue02;
@@ -67,10 +67,14 @@ ol {
 }
 
 blockquote {
-  color: $color-fg-light;
-  border-left: 0.2em solid $color-fg;
+  color: $slate04;
+  border-left: 0.2em solid $slate05;
   margin: 2em 0;
   padding: 0 2em;
+}
+
+blockquote cite {
+  font-style: normal;
 }
 
 table {
@@ -83,15 +87,11 @@ table {
 tr {
   th,
   td {
+    background: $background-light;
     text-align: left;
     vertical-align: top;
     padding: 0.5em 1em;
     border-bottom: 0.1rem solid $slate01;
-  }
-
-  th {
-    background: $color-bg-light;
-    font-weight: normal;
   }
 
   &:last-child td {
@@ -131,21 +131,17 @@ hr {
 
 .main {
   @include page-layout;
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 6em;
 }
 
 .hero {
-  &__blurb {
-    margin-bottom: 1.25em;
-  }
-
   &__links {
     a {
       @include font-size($base-font-sizes);
-      color: $color-fg;
+      color: $slate05;
       text-decoration: none;
-      border-bottom: solid 0.2rem rgba($color-fg-light, 0.5);
+      border-bottom: solid 0.2rem rgba($slate04, 0.5);
 
       &:hover {
         text-decoration: none;
@@ -162,9 +158,9 @@ hr {
 .posts {
   a {
     @include font-size($base-font-sizes);
-    color: $color-fg;
+    color: $slate05;
     text-decoration: none;
-    border-bottom: solid 0.2rem rgba($color-fg, 0.5);
+    border-bottom: solid 0.2rem rgba($slate05, 0.5);
 
     &:hover {
       text-decoration: none;
@@ -174,7 +170,7 @@ hr {
 
   &__date {
     @include font-size($small-font-sizes);
-    color: $color-fg-light;
+    color: $slate04;
     margin-left: 0.4em;
   }
 }
@@ -182,7 +178,7 @@ hr {
 .post {
   &__date {
     display: block;
-    color: $color-fg-light;
+    color: $slate04;
     margin: 2em 0 1em;
   }
 }
