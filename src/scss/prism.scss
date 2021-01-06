@@ -4,7 +4,7 @@
 :not(pre) > code {
   @include font-size($small-font-sizes);
   font-family: $font-stack-mono;
-  background: #fafafa;
+  background: $background-light;
   border: 0.1rem solid $slate01;
   padding: 0.1em 0.05em;
   margin: 0 0.1em;
@@ -19,7 +19,7 @@
 pre {
   @include font-size($small-font-sizes);
   font-family: $font-stack-mono;
-  background: #fafafa;
+  background: $background-light;
   border: 0.1rem solid $slate01;
   padding: 1em;
   margin: 1em 0;

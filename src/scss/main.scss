@@ -16,6 +16,7 @@ html {
 
 body {
   @include font-size($base-font-sizes);
+  background: $background;
   color: $slate05;
   font-family: $font-stack-body;
   font-weight: 400;
@@ -93,7 +94,7 @@ tr {
   }
 
   th {
-    background: #fafafa;
+    background: $background-light;
     font-weight: normal;
   }
 
