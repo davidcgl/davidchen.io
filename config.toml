@@ -1,0 +1,26 @@
+base_url = "https://davidchen.io"
+title = "David Chen"
+description = "Ramblings by David Chen."
+
+# Enable Sass.
+compile_sass = true
+
+# Enable syntax highlighting.
+highlight_code = true
+highlight_theme = "inspired-github"
+
+# Don't build search index.
+build_search_index = false
+
+# Generate Atom feeds.
+generate_feed = true
+feed_filename = "atom.xml"
+
+[extra]
+email = "hello@davidchen.io"
+github_id = "davidcgl"
+github_url = "https://github.com/davidcgl"
+linked_id = "davidcgl"
+linkedin_url = "https://www.linkedin.com/in/davidcgl"
+twitter_id = "@archenary"
+twitter_url = "https://twitter.com/archenary"

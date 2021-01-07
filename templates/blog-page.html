@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title ~ " — David Chen" }}{% endblock title %}
+{% block description %}{{ page.description }}{% endblock description %}
+
+{% block content %}
+  <article class="post">
+    <h1 class="title">{{ page.title }}</h1>
+    <time class="post__date" datetime="{{ page.date | date(format="%Y-%m-%d") }}">
+      {{ page.date | date(format="%B %e, %Y") }}
+    </time>
+    {{ page.content | safe }}
+  </article>
+{% endblock content %}
