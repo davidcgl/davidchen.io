@@ -1,6 +1,7 @@
 base_url = "https://davidchen.io"
+
 title = "David Chen"
-description = "Ramblings by David Chen."
+description = "David Chen is a software engineer living in the San Francisco Bay Area."
 
 # Enable Sass.
 compile_sass = true
