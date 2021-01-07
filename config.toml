@@ -1,6 +1,7 @@
 base_url = "https://davidchen.io"
+
 title = "David Chen"
-description = "Ramblings by David Chen."
+description = "David Chen is a software engineer living in the San Francisco Bay Area."
 
 # Enable Sass.
 compile_sass = true
@@ -17,10 +18,11 @@ generate_feed = true
 feed_filename = "atom.xml"
 
 [extra]
+name = "David Chen"
 email = "hello@davidchen.io"
 github_id = "davidcgl"
 github_url = "https://github.com/davidcgl"
-linked_id = "davidcgl"
+linkedin_id = "davidcgl"
 linkedin_url = "https://www.linkedin.com/in/davidcgl"
 twitter_id = "@archenary"
 twitter_url = "https://twitter.com/archenary"

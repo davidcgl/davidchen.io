@@ -1,4 +1,4 @@
-{% import "macros/social.html" as social -%}
+{% import "macros/head.html" as head -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <title>{% block title %}{{ head::title() }}{% endblock %}</title>
 
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    <meta name="description" content="{% block description %}{{ head::description() }}{% endblock %}">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="preload" href="https://use.typekit.net/aao0hdd.css" as="style">
@@ -21,27 +21,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-    {%- if current_url -%}<link rel="canonical" href="{{ current_url }}">{%- endif -%}
-    <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="/atom.xml">
+    <link rel="canonical" href="{{ head::url() }}">
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
 
     <script defer src="/js/main.js"></script>
 
-    {# current_url isn't available for 404 #}
-    {%- if current_url -%}
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="{{ current_url }}">
-      <meta property="og:title" content="{{ social::title() }}">
-      <meta property="og:description" content="{{ social::description() }}">
-      <meta property="og:image" content="{{ social::image() }}">
-      <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ head::url() }}">
+    <meta property="og:title" content="{{ head::title() }}">
+    <meta property="og:description" content="{{ head::description() }}">
+    <meta property="og:image" content="{{ head::image() }}">
+    <meta property="og:site_name" content="{{ config.title }}">
 
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:site" content="{{ config.extra.twitter_id }}">
-      <meta name="twitter:creator" content="{{ config.extra.twitter_id }}">
-      <meta name="twitter:title" content="{{ social::title() }}">
-      <meta name="twitter:description" content="{{ social::description() }}">
-      <meta name="twitter:image" content="{{ social::image() }}">
-    {%- endif -%}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ config.extra.twitter_id }}">
+    <meta name="twitter:creator" content="{{ config.extra.twitter_id }}">
+    <meta name="twitter:title" content="{{ head::title() }}">
+    <meta name="twitter:description" content="{{ head::description() }}">
+    <meta name="twitter:image" content="{{ head::image() }}">
   </head>
 
   <body>
