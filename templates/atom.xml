@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ get_url(path="/", trailing_slash=true) | safe }}</id>
+  <title>{{ config.title }}</title>
+  <subtitle>Ramblings by David Chen.</subtitle>
+  <icon>{{ get_url(path="/img/logo-128x128.png") }}</icon>
+  <author>
+    <name>{{ config.extra.name }}</name>
+    <email>{{ config.extra.email }}</email>
+    <uri>{{ get_url(path="/", trailing_slash=true) | safe }}</uri>
+  </author>
+  <updated>{{ last_updated | date(format="%+") }}</updated>
+  <link rel="self" href="{{ feed_url | safe }}"/>
+  <link rel="alternate" href="{{ get_url(path="/", trailing_slash=true) | safe }}"/>
+  {%- for page in pages %}
+  <entry xml:lang="{{ page.lang }}">
+    <id>{{ page.permalink | safe }}</id>
+    <title>{{ page.title }}</title>
+    <published>{{ page.date | date(format="%+") }}</published>
+    <updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
+    <link href="{{ page.permalink | safe }}" type="text/html"/>
+    <content type="html">{{ page.content }}</content>
+  </entry>
+	{%- endfor %}
+</feed>

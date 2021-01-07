@@ -18,10 +18,11 @@ generate_feed = true
 feed_filename = "atom.xml"
 
 [extra]
+name = "David Chen"
 email = "hello@davidchen.io"
 github_id = "davidcgl"
 github_url = "https://github.com/davidcgl"
-linked_id = "davidcgl"
+linkedin_id = "davidcgl"
 linkedin_url = "https://www.linkedin.com/in/davidcgl"
 twitter_id = "@archenary"
 twitter_url = "https://twitter.com/archenary"

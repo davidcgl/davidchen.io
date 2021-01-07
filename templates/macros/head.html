@@ -20,18 +20,18 @@
 
 {%- macro image() -%}
   {%- if section and section.extra.image -%}
-    {{ get_url(path=section.extra.image) }}
+    {{ get_url(path=section.extra.image) | safe }}
   {%- elif page and page.extra.image -%}
-    {{ get_url(path=page.extra.image) }}
+    {{ get_url(path=page.extra.image) | safe }}
   {%- else -%}
-    {{ get_url(path="img/logo-padded-400x400.png") }}
+    {{ get_url(path="img/logo-padded-400x400.png") | safe }}
   {%- endif -%}
 {%- endmacro image -%}
 
 {%- macro url() -%}
   {%- if current_url -%}
-    {{ current_url }}
+    {{ current_url | safe }}
   {%- else -%}
-    {{ config.base_url }}
+    {{ config.base_url | safe }}
   {%- endif -%}
 {%- endmacro url -%}
