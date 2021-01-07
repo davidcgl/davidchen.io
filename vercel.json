@@ -7,12 +7,12 @@
   },
   "routes": [
     {
-      "src": "/assets/css/*.css",
+      "src": "/css/*.css",
       "headers": { "x-content-type-options": "nosniff" },
       "continue": true
     },
     {
-      "src": "/assets/js/*.js",
+      "src": "/js/*.js",
       "headers": { "x-content-type-options": "nosniff" },
       "continue": true
     },
