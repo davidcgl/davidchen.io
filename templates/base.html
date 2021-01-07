@@ -1,0 +1,75 @@
+{% import "macros/social.html" as social -%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="https://use.typekit.net/aao0hdd.css" as="style">
+    <link rel="preconnect" href="https://p.typekit.net/">
+    <link rel="stylesheet" href="https://use.typekit.net/aao0hdd.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    {%- if current_url -%}<link rel="canonical" href="{{ current_url }}">{%- endif -%}
+    <link rel="alternate" type="application/atom+xml" title="David Chen's blog" href="/atom.xml">
+
+    <script defer src="/js/main.js"></script>
+
+    {# current_url isn't available for 404 #}
+    {%- if current_url -%}
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ current_url }}">
+      <meta property="og:title" content="{{ social::title() }}">
+      <meta property="og:description" content="{{ social::description() }}">
+      <meta property="og:image" content="{{ social::image() }}">
+      <meta property="og:site_name" content="{{ config.title }}">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="{{ config.extra.twitter_id }}">
+      <meta name="twitter:creator" content="{{ config.extra.twitter_id }}">
+      <meta name="twitter:title" content="{{ social::title() }}">
+      <meta name="twitter:description" content="{{ social::description() }}">
+      <meta name="twitter:image" content="{{ social::image() }}">
+    {%- endif -%}
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="/" aria-label="Logo">
+          <svg
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+              width="32"
+              height="32"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#32414D" cx="50" cy="50" r="50"/>
+              <circle fill="#FFF" cx="50" cy="50" r="40"/>
+              <path d="M50 20c16.5685425 0 30 13.4314575 30 30 0 16.4028571-13.1641715 29.7310571-29.5038951 29.9959809L50 80V20z" fill="#3867D6"/>
+              <path d="M40.444444 30c-11.2911549 0-20.4444444 8.954305-20.4444444 20 0 10.935238 8.9711391 19.8207048 20.1063581 19.9973206L40.444444 70V30z" fill="#32414D"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
