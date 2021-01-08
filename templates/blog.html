@@ -3,9 +3,9 @@
 {% block content %}
   <h1 class="title">Blog</h1>
   <div class="posts">
-    {% for page in section.pages %}
+    {%- for page in section.pages %}
     <p>
-      <a href="{{ page.path }}">{{ page.title }}</a>
+      <a href="{{ page.path | safe }}">{{ page.title }}</a>
       <time class="posts__date" datetime="{{ page.date | date(format="%Y-%m-%d")}}">
         {{ page.date | date(format="%B %e, %Y") }}
       </time>

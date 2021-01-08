@@ -18,11 +18,11 @@
       <span class="hero__divider">/</span>
       <a href="/atom.xml">RSS</a>
       <span class="hero__divider">/</span>
-      <a href="{{ config.extra.twitter_url }}">Twitter</a>
+      <a href="{{ config.extra.twitter_url | safe }}">Twitter</a>
       <span class="hero__divider">/</span>
-      <a href="{{ config.extra.github_url }}">GitHub</a>
+      <a href="{{ config.extra.github_url | safe }}">GitHub</a>
       <span class="hero__divider">/</span>
-      <a href="{{ config.extra.linkedin_url }}">LinkedIn</a>
+      <a href="{{ config.extra.linkedin_url | safe }}">LinkedIn</a>
     </div>
   </div>
 {% endblock content %}

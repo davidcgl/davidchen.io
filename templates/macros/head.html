@@ -1,4 +1,4 @@
-{%- macro title() -%}
+{% macro title() %}
   {%- if section and section.title -%}
     {{ section.title ~ " — " ~ config.title }}
   {%- elif page and page.title -%}
@@ -6,9 +6,9 @@
   {%- else -%}
     {{ config.title }}
   {%- endif -%}
-{%- endmacro title -%}
+{% endmacro title %}
 
-{%- macro description() -%}
+{% macro description() %}
   {%- if section and section.description -%}
     {{ section.description }}
   {%- elif page and page.description -%}
@@ -16,9 +16,9 @@
   {%- else -%}
     {{ config.description }}
   {%- endif -%}
-{%- endmacro description -%}
+{% endmacro description %}
 
-{%- macro image() -%}
+{% macro image() %}
   {%- if section and section.extra.image -%}
     {{ get_url(path=section.extra.image) | safe }}
   {%- elif page and page.extra.image -%}
@@ -28,10 +28,10 @@
   {%- endif -%}
 {%- endmacro image -%}
 
-{%- macro url() -%}
+{% macro url() %}
   {%- if current_url -%}
     {{ current_url | safe }}
   {%- else -%}
     {{ config.base_url | safe }}
   {%- endif -%}
-{%- endmacro url -%}
+{% endmacro url %}
