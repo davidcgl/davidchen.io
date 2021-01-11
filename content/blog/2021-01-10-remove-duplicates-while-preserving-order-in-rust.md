@@ -44,30 +44,4 @@ items.retain(|item| seen.insert(*item));
 assert_eq!(items, vec![1, 3, 2]);
 ```
 
-This works because `retain` only keeps items for which the predicate returns true, and `insert` only returns true if the item was not previously present in the set. Since the vector is traversed in order, we end up keeping just the first occurrence of each item.
-
-If we don’t need to preserve the order, we can use `sort` and `dedup`. The vector must be sorted first because `dedup` only removes consecutive duplicate items.
-
-```rust
-let mut items = vec![1, 3, 1, 2, 2];
-items.sort();  // [1, 1, 2, 2, 3]
-items.dedup(); // [1, 2, 3]
-assert_eq!(items, vec![1, 2, 3]);
-```
-
-Alternatively, we can also convert the vector into a set:
-
-```rust
-let items1 = vec![1, 3, 1, 2, 2];
-let items2 = vec![3, 2, 1, 3, 1];
-
-let set1 = items1.into_iter().collect::<HashSet<i32>>();
-let set2 = items2.into_iter().collect::<BTreeSet<i32>>();
-
-// set1 and set2 both contain {1, 2, 3},
-// but only set2 is ordered
-println!("{:?}", set1);
-println!("{:?}", set2);
-```
-
-[0]: https://www.oreilly.com/library/view/programming-rust/9781491927274/
+This works because `retain` only keeps items for which the predicate returns true, and `insert` only returns true if the item was not previously present in the set. Since the vector is traversed in order, we end up keeping just the first occurrence of each item. Neat!
