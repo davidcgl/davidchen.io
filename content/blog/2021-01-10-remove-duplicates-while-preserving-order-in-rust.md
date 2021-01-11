@@ -55,7 +55,7 @@ items.dedup(); // [1, 2, 3]
 assert_eq!(items, vec![1, 2, 3]);
 ```
 
-Alternatively, we can also just use a `HashSet` or `BTreeSet`:
+Alternatively, we can also convert the vector into a set:
 
 ```rust
 let items1 = vec![1, 3, 1, 2, 2];
