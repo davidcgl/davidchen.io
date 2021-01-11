@@ -45,3 +45,5 @@ assert_eq!(items, vec![1, 3, 2]);
 ```
 
 This works because `retain` only keeps items for which the predicate returns true, and `insert` only returns true if the item was not previously present in the set. Since the vector is traversed in order, we end up keeping just the first occurrence of each item. Neat!
+
+[0]: https://www.oreilly.com/library/view/programming-rust/9781491927274/
