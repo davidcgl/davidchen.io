@@ -6,16 +6,17 @@ description = "David Chen is a software engineer living in the San Francisco Bay
 # Enable Sass.
 compile_sass = true
 
-# Enable syntax highlighting.
-highlight_code = true
-highlight_theme = "inspired-github"
-
 # Don't build search index.
 build_search_index = false
 
 # Generate Atom feeds.
 generate_feed = true
 feed_filename = "atom.xml"
+
+# Enable syntax highlighting.
+[markdown]
+highlight_code = true
+highlight_theme = "inspired-github"
 
 [extra]
 name = "David Chen"

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1 class="title">Blog</h1>
   <div class="posts">
+    <h1 class="posts__title">Blog</h1>
     {%- for page in section.pages %}
-    <p>
+    <p class="posts__links">
       <a href="{{ page.path | safe }}">{{ page.title }}</a>
       <time class="posts__date" datetime="{{ page.date | date(format="%Y-%m-%d")}}">
         {{ page.date | date(format="%B %e, %Y") }}

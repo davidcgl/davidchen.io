@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "build": {
-    "env": {
-      "ZOLA_VERSION": "0.12.2"
-    }
-  },
   "headers": [
     {
       "source": "/css/(.*).css",

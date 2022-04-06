@@ -1,5 +1,5 @@
-@import 'normalize';
-@import 'variables';
+@import "normalize";
+@import "variables";
 
 ::selection {
   background: $yellow01;
@@ -14,36 +14,44 @@ html {
 }
 
 body {
-  @include font-size($base-font-sizes);
   background: $background;
   color: $slate05;
+
+  @include body-font-size;
   font-family: $font-stack-body;
   font-weight: 400;
   line-height: 1.5;
+
+  width: 100%;
+  max-width: $page-width;
+  padding: 0 $page-gutter;
+  margin: 0 auto;
 }
 
 h1 {
-  @include font-size($h1-font-sizes);
+  @include h1-font-size;
   color: #000;
   line-height: 1.25;
   margin: 0.5em 0;
 }
 
 h2 {
-  @include font-size($h2-font-sizes);
+  @include h2-font-size;
   color: #000;
   line-height: 1.25;
   margin: 2em 0 0.5em;
 }
 
 h3 {
-  @include font-size($h3-font-sizes);
+  @include h3-font-size;
   color: #000;
   line-height: 1.25;
   margin: 2em 0 0.5em;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   color: #000;
 }
 
@@ -77,7 +85,7 @@ blockquote cite {
 }
 
 table {
-  @include font-size($small-font-sizes);
+  @include small-font-size;
   border-spacing: 0;
   border: 0.1rem solid $slate01;
   width: 100%;
@@ -86,7 +94,7 @@ table {
 tr {
   th,
   td {
-    background: $background-light;
+    background: $background;
     text-align: left;
     vertical-align: top;
     padding: 0.5em 1em;
@@ -111,24 +119,24 @@ hr {
 
 // Inline code.
 :not(pre) > code {
-  @include font-size($small-font-sizes);
+  @include small-font-size;
   font-family: $font-stack-mono;
-  background: $background-light;
+  background: $background;
   border: 0.1rem solid $slate01;
   padding: 0.1em 0.05em;
   margin: 0 0.1em;
 
   &:before,
   &:after {
-    content: '\00a0';
+    content: "\00a0";
     letter-spacing: -0.2em;
   }
 }
 
 pre {
-  @include font-size($small-font-sizes);
+  @include small-font-size;
   font-family: $font-stack-mono;
-  background: $background-light;
+  background: $background;
   border: 0.1rem solid $slate01;
   padding: 1em;
   margin: 1em 0;
@@ -146,45 +154,34 @@ pre > code {
   tab-size: 2;
 }
 
-
 .header {
-  @include page-layout;
-
   display: flex;
   align-items: center;
-  height: 5em;
+  height: 8rem;
 
   &__logo {
-    a, svg {
+    a,
+    svg {
       display: block;
     }
   }
 }
 
-.title {
-  font-family: $font-stack-title;
-  font-weight: 500;
-  letter-spacing: -.05em;
-}
-
 .main {
-  @include page-layout;
-  padding-top: 1em;
-  padding-bottom: 6em;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 
-.hero {
+.home {
+  &__title {
+    @include h1-font-size;
+    letter-spacing: -0.05em;
+  }
+
   &__links {
     a {
-      @include font-size($base-font-sizes);
-      color: $slate05;
-      text-decoration: none;
-      border-bottom: solid 0.2rem rgba($slate04, 0.5);
-
-      &:hover {
-        text-decoration: none;
-        border-bottom: solid 0.2rem $blue02;
-      }
+      @include body-font-size;
+      @include bordered-anchor;
     }
   }
 
@@ -194,26 +191,31 @@ pre > code {
 }
 
 .posts {
-  a {
-    @include font-size($base-font-sizes);
-    color: $slate05;
-    text-decoration: none;
-    border-bottom: solid 0.2rem rgba($slate05, 0.5);
+  &__title {
+    @include h1-font-size;
+    letter-spacing: -0.05em;
+  }
 
-    &:hover {
-      text-decoration: none;
-      border-bottom: solid 0.2rem $blue02;
+  &__links {
+    a {
+      @include body-font-size;
+      @include bordered-anchor;
     }
   }
 
   &__date {
-    @include font-size($small-font-sizes);
+    @include small-font-size;
     color: $slate04;
     margin-left: 0.4em;
   }
 }
 
 .post {
+  &__title {
+    @include h1-font-size;
+    letter-spacing: -0.05em;
+  }
+
   &__date {
     display: block;
     color: $slate04;

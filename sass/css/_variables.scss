@@ -16,56 +16,50 @@ $slate03: #99a0a6;
 $slate04: #5b6771;
 $slate05: #32414d;
 
-$background: #fffef2;
-$background-light: #fff;
+$background: #fff;
 
-$page-width: 56rem; // 70-75 characters for 16px neue-haas-unica
+$page-width: 52rem;
 $page-gutter: 2rem;
 
-$font-stack-title: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-stack-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+$font-stack-title: Inter, Helvetica, "Segoe UI", Roboto, Arial, sans-serif;
+$font-stack-body: Inter, Helvetica, "Segoe UI", Roboto, Arial, sans-serif;
+$font-stack-mono: Menlo, Monaco, Consolas, monospace;
 
-$base-font-sizes: (
-  default: 1.6rem,
-  480px: 1.6rem,
-);
+// https://rsms.me/inter/dynmetrics/
 
-$small-font-sizes: (
-  default: 1.3rem,
-  480px: 1.3rem,
-);
-
-$h1-font-sizes: (
-  default: 3.6rem,
-  480px: 3.6rem,
-);
-
-$h2-font-sizes: (
-  default: 2.4rem,
-  480px: 2.4rem,
-);
-
-$h3-font-sizes: (
-  default: 2rem,
-  480px: 2rem,
-);
-
-@mixin font-size($fs-map) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint == default {
-      font-size: $fs-font-size;
-    } @else {
-      @media screen and (min-width: $fs-breakpoint) {
-        font-size: $fs-font-size;
-      }
-    }
-  }
+@mixin body-font-size {
+  font-size: 1.5rem;
+  letter-spacing: -0.009rem;
 }
 
-@mixin page-layout {
-  width: 100%;
-  max-width: $page-width;
-  padding: 0 $page-gutter;
-  margin: 0 auto;
+@mixin small-font-size {
+  font-size: 1.3rem;
+  letter-spacing: -0.003rem;
+}
+
+@mixin h1-font-size {
+  font-size: 3.2rem;
+  letter-spacing: -0.021rem;
+}
+
+@mixin h2-font-size {
+  font-size: 2.4rem;
+  letter-spacing: -0.019rem;
+}
+
+@mixin h3-font-size {
+  font-size: 2rem;
+  letter-spacing: -0.017rem;
+}
+
+@mixin bordered-anchor {
+  color: $slate05;
+  text-decoration: none;
+  border-bottom: solid 0.2rem rgba($slate05, 0.5);
+  padding-bottom: 0.2rem;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: solid 0.2rem $blue02;
+  }
 }
