@@ -1,66 +1,80 @@
 @import "normalize";
-@import "variables";
 
-::selection {
-  background: $yellow01;
+// ----------------------------------------------------------------------------
+// Variables
+// ----------------------------------------------------------------------------
+
+:root {
+  --color-background: #f8f6f5;
+  --color-default: #3b3a38;
+  --color-highlight: #000;
+  --color-dim: #93918f;
+  --color-vdim: #c9c5c1;
+  --font-sans: Inter, Helvetica, Segoe UI, Roboto, Arial, sans-serif;
+  --font-mono: Menlo, Monaco, Consolas, monospace;
+  --font-size: 1.6rem;
+  --font-size-s: 1.4rem;
+  --spacing: 1.5em;
+  --spacing-s: calc(0.5 * var(--spacing));
+  --spacing-m: var(--spacing);
+  --spacing-l: calc(1.5 * var(--spacing));
+  --spacing-xl: calc(2.5 * var(--spacing));
+  --spacing-xxl: calc(5 * var(--spacing));
 }
+
+// ----------------------------------------------------------------------------
+// Base
+// ----------------------------------------------------------------------------
 
 * {
   box-sizing: border-box;
 }
 
 html {
+  // Make it so that 1rem = 10px on most browsers.
   font-size: 62.5%;
 }
 
 body {
-  background: $background;
-  color: $slate05;
-
-  @include body-font-size;
-  font-family: $font-stack-body;
+  background: var(--color-background);
+  color: var(--color-default);
+  font-family: var(--font-sans);
+  font-size: var(--font-size);
   font-weight: 400;
   line-height: 1.5;
-
   width: 100%;
-  max-width: $page-width;
-  padding: 0 $page-gutter;
+  max-width: 58rem;
+  padding: 4rem;
   margin: 0 auto;
 }
 
-h1 {
-  @include h1-font-size;
-  color: #000;
-  line-height: 1.25;
-  margin: 0.5em 0;
-}
+// ----------------------------------------------------------------------------
+// Typography
+// ----------------------------------------------------------------------------
 
-h2 {
-  @include h2-font-size;
-  color: #000;
-  line-height: 1.25;
-  margin: 2em 0 0.5em;
-}
-
+h1,
+h2,
 h3 {
-  @include h3-font-size;
-  color: #000;
-  line-height: 1.25;
-  margin: 2em 0 0.5em;
-}
-
-h4,
-h5,
-h6 {
-  color: #000;
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: var(--color-highlight);
+  margin: var(--spacing-s) 0;
 }
 
 a {
-  color: $slate05;
+  color: var(--color-default);
+  text-decoration-color: var(--color-dim);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.05em;
 
   &:hover {
-    color: $blue02;
+    color: var(--color-highlight);
+    transition: color 0.2s ease-in;
   }
+}
+
+strong {
+  font-weight: 500;
 }
 
 em,
@@ -74,8 +88,7 @@ ol {
 }
 
 blockquote {
-  color: $slate04;
-  border-left: 0.2em solid $slate05;
+  font-style: italic;
   margin: 2em 0;
   padding: 0 2em;
 }
@@ -85,20 +98,20 @@ blockquote cite {
 }
 
 table {
-  @include small-font-size;
+  font-size: var(--font-size-s);
   border-spacing: 0;
-  border: 0.1rem solid $slate01;
+  border: 0.1rem solid var(--color-dim);
   width: 100%;
 }
 
 tr {
   th,
   td {
-    background: $background;
+    background: var(--color-background);
     text-align: left;
     vertical-align: top;
     padding: 0.5em 1em;
-    border-bottom: 0.1rem solid $slate01;
+    border-bottom: 0.1rem solid var(--color-vdim);
   }
 
   &:last-child td {
@@ -106,23 +119,12 @@ tr {
   }
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-hr {
-  border: 0;
-  height: 0;
-  border-bottom: 0.1rem solid $slate01;
-}
-
 // Inline code.
 :not(pre) > code {
-  @include small-font-size;
-  font-family: $font-stack-mono;
-  background: $background;
-  border: 0.1rem solid $slate01;
+  font-size: var(--font-size-s);
+  font-family: var(--font-mono);
+  background: var(--color-background);
+  border: 0.1rem solid var(--color-vdim);
   padding: 0.1em 0.05em;
   margin: 0 0.1em;
 
@@ -134,17 +136,17 @@ hr {
 }
 
 pre {
-  @include small-font-size;
-  font-family: $font-stack-mono;
-  background: $background;
-  border: 0.1rem solid $slate01;
+  font-size: var(--font-size-s);
+  font-family: var(--font-mono);
+  background: var(--color-background);
+  border: 0.1rem solid var(--color-vdim);
   padding: 1em;
   margin: 1em 0;
   overflow: auto;
 }
 
 pre > code {
-  font-family: $font-stack-mono;
+  font-family: var(--font-mono);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -154,71 +156,40 @@ pre > code {
   tab-size: 2;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 8rem;
+// ----------------------------------------------------------------------------
+// Block elements
+// ----------------------------------------------------------------------------
 
-  &__logo {
-    a,
-    svg {
-      display: block;
-    }
-  }
+img {
+  height: auto;
+  max-width: 100%;
 }
 
-.main {
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 0.1rem solid var(--color-vdim);
+}
+
+main {
   padding-top: 2rem;
   padding-bottom: 6rem;
 }
 
-.home {
-  &__title {
-    @include h1-font-size;
-    letter-spacing: -0.05em;
+// ----------------------------------------------------------------------------
+// Header
+// ----------------------------------------------------------------------------
+
+header {
+  color: var(--color-dim);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+
+  h1 {
+    margin: 0;
   }
 
-  &__links {
-    a {
-      @include body-font-size;
-      @include bordered-anchor;
-    }
-  }
-
-  &__divider {
-    margin: 0 0.1em;
-  }
-}
-
-.posts {
-  &__title {
-    @include h1-font-size;
-    letter-spacing: -0.05em;
-  }
-
-  &__links {
-    a {
-      @include body-font-size;
-      @include bordered-anchor;
-    }
-  }
-
-  &__date {
-    @include small-font-size;
-    color: $slate04;
-    margin-left: 0.4em;
-  }
-}
-
-.post {
-  &__title {
-    @include h1-font-size;
-    letter-spacing: -0.05em;
-  }
-
-  &__date {
-    display: block;
-    color: $slate04;
-    margin: 2em 0 1em;
+  a {
+    text-decoration: none;
   }
 }

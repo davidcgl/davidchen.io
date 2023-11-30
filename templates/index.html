@@ -1,28 +1,22 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<div class="home">
+  <h1>About</h1>
+  <p>
+    I'm a software engineer living in the San Francisco Bay Area. I've spent
+    most of my career as full-stack engineer focusing on product and web
+    development. I'm intrigued by the art of crafting elegant code to solve
+    complex problems and build delightful products.
+  </p>
+  <p>
+    With a decade of experience in the tech industry, I've had the privilege to
+    work with talented teams in companies of all sizes, such as Amazon, Google,
+    Stripe, and most recently Watershed.
+  </p>
 
-{% block content %}
-  <div class="home">
-    <h1 class="home__title">David Chen</h1>
-    <p>
-      Hello! I'm a software engineer living in the San Francisco Bay Area.
-      This site is dedicated to my creative interests and whims. I find programming
-      fascinating, and sometimes <a href="/blog">write about it</a>.
-    </p>
-    <p>
-      I currently work at <a href="https://stripe.com">Stripe</a>. Previously,
-      I've also worked at Google and Amazon. If you'd like to get in touch,
-      my email is <a href="mailto:{{config.extra.email }}">{{ config.extra.email }}</a>.
-    </p>
-    <p class="home__links">
-      <a href="/blog">Blog</a>
-      <span class="hero__divider">/</span>
-      <a href="/atom.xml">RSS</a>
-      <span class="hero__divider">/</span>
-      <a href="{{ config.extra.twitter_url | safe }}">Twitter</a>
-      <span class="hero__divider">/</span>
-      <a href="{{ config.extra.github_url | safe }}">GitHub</a>
-      <span class="hero__divider">/</span>
-      <a href="{{ config.extra.linkedin_url | safe }}">LinkedIn</a>
-    </p>
-  </div>
+  <p>
+    I'm always eager to connect with like-minded individuals and explore new
+    opportunities. My email is
+    <a href="mailto:{{config.extra.email }}">{{ config.extra.email }}</a>.
+  </p>
+</div>
 {% endblock content %}
