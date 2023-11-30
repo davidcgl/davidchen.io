@@ -3,70 +3,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>{% block title %}{{ head::title() }}{% endblock %}</title>
 
-    <meta name="description" content="{% block description %}{{ head::description() }}{% endblock %}">
-    <meta name="theme-color" content="#ffffff">
+    <meta
+      name="description"
+      content="{% block description %}{{ head::description() }}{% endblock %}"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css" />
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-    <link rel="canonical" href="{{ head::url() }}">
-    <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    <link rel="canonical" href="{{ head::url() }}" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="RSS"
+      href="/atom.xml"
+    />
 
     <script defer src="/js/main.js"></script>
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ head::url() }}">
-    <meta property="og:title" content="{{ head::title() }}">
-    <meta property="og:description" content="{{ head::description() }}">
-    <meta property="og:image" content="{{ head::image() }}">
-    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ head::url() }}" />
+    <meta property="og:title" content="{{ head::title() }}" />
+    <meta property="og:description" content="{{ head::description() }}" />
+    <meta property="og:image" content="{{ head::image() }}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ config.extra.twitter_id }}">
-    <meta name="twitter:creator" content="{{ config.extra.twitter_id }}">
-    <meta name="twitter:title" content="{{ head::title() }}">
-    <meta name="twitter:description" content="{{ head::description() }}">
-    <meta name="twitter:image" content="{{ head::image() }}">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="{{ config.extra.twitter_id }}" />
+    <meta name="twitter:creator" content="{{ config.extra.twitter_id }}" />
+    <meta name="twitter:title" content="{{ head::title() }}" />
+    <meta name="twitter:description" content="{{ head::description() }}" />
+    <meta name="twitter:image" content="{{ head::image() }}" />
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <a href="/" aria-label="Logo">
-          <svg
-              role="img"
-              aria-hidden="true"
-              focusable="false"
-              width="32"
-              height="32"
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-            <g fill="none" fill-rule="evenodd">
-              <circle fill="#32414D" cx="50" cy="50" r="50"/>
-              <circle fill="#FFF" cx="50" cy="50" r="40"/>
-              <path d="M50 20c16.5685425 0 30 13.4314575 30 30 0 16.4028571-13.1641715 29.7310571-29.5038951 29.9959809L50 80V20z" fill="#3867D6"/>
-              <path d="M40.444444 30c-11.2911549 0-20.4444444 8.954305-20.4444444 20 0 10.935238 8.9711391 19.8207048 20.1063581 19.9973206L40.444444 70V30z" fill="#32414D"/>
-            </g>
-          </svg>
-        </a>
-      </div>
+    <header>
+      <a href="/"><h1>David Chen</h1></a>
+      <div>Software Engineer</div>
+      <div>San Francisco Bay Area</div>
     </header>
-
-    <main class="main">
-      {% block content %}{% endblock %}
-    </main>
+    <main class="main">{% block content %}{% endblock %}</main>
   </body>
 </html>
