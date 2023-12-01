@@ -1,22 +1,73 @@
 {% extends "base.html" %} {% block content %}
 <div class="home">
-  <h1>About</h1>
-  <p>
-    I'm a software engineer living in the San Francisco Bay Area. I've spent
-    most of my career as full-stack engineer focusing on product and web
-    development. I'm intrigued by the art of crafting elegant code to solve
-    complex problems and build delightful products.
-  </p>
-  <p>
-    With a decade of experience in the tech industry, I've had the privilege to
-    work with talented teams in companies of all sizes, such as Amazon, Google,
-    Stripe, and most recently Watershed.
-  </p>
+  <section>
+    <h2>About</h2>
+    <p>
+      I'm a software engineer living in the San Francisco Bay Area. I have a
+      decade of experience working in the tech industry, with a focus on web and
+      product development. I enjoy building delightful user experiences and
+      diving into the finer details of making things work.
+    </p>
+  </section>
 
-  <p>
-    I'm always eager to connect with like-minded individuals and explore new
-    opportunities. My email is
-    <a href="mailto:{{config.extra.email }}">{{ config.extra.email }}</a>.
-  </p>
+  <section>
+    <h2>Contact</h2>
+    <div class="split">
+      <div class="split__label">Email</div>
+      <div>
+        <a href="mailto:{{config.extra.email}}">{{config.extra.email}}</a>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">Twitter</div>
+      <div>
+        <a href="{{config.extra.twitter_url}}">{{config.extra.twitter_id}}</a>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">GitHub</div>
+      <div>
+        <a href="{{config.extra.github_url}}">{{config.extra.github_id}}</a>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">LinkedIn</div>
+      <div>
+        <a href="{{config.extra.linkedin_url}}">{{config.extra.linkedin_id}}</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <div class="split">
+      <div class="split__label">2022–2023</div>
+      <div>
+        <h3>Senior Software Engineer at Watershed</h3>
+        <small>San Francisco, CA</small>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">2018–2022</div>
+      <div>
+        <h3>Senior Software Engineer at Stripe</h3>
+        <small>San Francisco, CA</small>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">2014–2018</div>
+      <div>
+        <h3>Software Engineer at Google</h3>
+        <small>Mountain View, CA</small>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split__label">2013–2014</div>
+      <div>
+        <h3>Software Engineer at Amazon</h3>
+        <small>Seattle, WA</small>
+      </div>
+    </div>
+  </section>
 </div>
 {% endblock content %}
