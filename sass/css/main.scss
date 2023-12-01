@@ -20,6 +20,7 @@
   --spacing-l: calc(1.5 * var(--spacing));
   --spacing-xl: calc(2.5 * var(--spacing));
   --spacing-xxl: calc(5 * var(--spacing));
+  --spacing-width-max: 54rem;
 }
 
 // ----------------------------------------------------------------------------
@@ -44,7 +45,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   width: 100%;
-  max-width: 54rem;
+  max-width: var(--spacing-width-max);
   margin: 0 auto;
 }
 
@@ -91,7 +92,7 @@ strong {
 small {
   display: block;
   color: var(--color-dim);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-m);
   line-height: 1.5;
 }
 
@@ -195,14 +196,20 @@ main {
 }
 
 .split {
-  display: grid;
-  grid-template-columns: 8em 1fr;
-  align-items: baseline;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-m);
 
   &__label {
     color: var(--color-dim);
     font-weight: 500;
+  }
+}
+
+@media (min-width: 540px) {
+  .split {
+    display: grid;
+    grid-template-columns: 8em 1fr;
+    align-items: baseline;
+    margin-bottom: var(--spacing-s);
   }
 }
 
@@ -213,7 +220,7 @@ main {
 header {
   color: var(--color-dim);
   font-weight: 500;
-  margin-bottom: var(--spacing-xxl);
+  margin-bottom: var(--spacing-xl);
 
   a {
     text-decoration: none;
