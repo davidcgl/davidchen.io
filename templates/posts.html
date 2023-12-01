@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="posts">
-    <h1 class="posts__title">Blog</h1>
+    <h2 class="posts__title">Blog</h2>
     {%- for page in section.pages %}
     <p class="posts__links">
       <a href="{{ page.path | safe }}">{{ page.title }}</a>

@@ -2,10 +2,12 @@
 
 {% block content %}
   <article class="post">
-    <h1 class="post__title">{{ page.title }}</h1>
-    <time class="post__date" datetime="{{ page.date | date(format="%Y-%m-%d") }}">
-      {{ page.date | date(format="%B %e, %Y") }}
-    </time>
+    <header>
+      <h2>{{ page.title }}</h2>
+      <time  datetime="{{ page.date | date(format="%Y-%m-%d") }}">
+        {{ page.date | date(format="%B %e, %Y") }}
+      </time>
+    </header>
     {{ page.content | safe }}
   </article>
 {% endblock content %}
