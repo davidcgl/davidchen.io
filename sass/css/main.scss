@@ -5,12 +5,14 @@
 // ----------------------------------------------------------------------------
 
 :root {
-  --color-background: #f6f5f5;
-  --color-highlight: #000;
-  --color-default: #3a3132;
-  --color-dim: #9d9899;
-  --color-vdim: #c4c1c2;
+  --color-background: #fcfbf3;
+  --color-highlight: #1d221c;
+  --color-default: #33382f;
+  --color-dim: #686d63;
+  --color-vdim: #e3e2d6;
+  --color-accent: #3d6b47;
   --font-sans: Inter, Helvetica, Segoe UI, Roboto, Arial, sans-serif;
+  --font-display: "Inter Tight", var(--font-sans);
   --font-mono: Menlo, Monaco, Consolas, monospace;
   --font-size: 1.6rem;
   --font-size-s: 1.4rem;
@@ -75,13 +77,12 @@ h3 {
 
 a {
   color: var(--color-default);
-  text-decoration-color: var(--color-dim);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.05em;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.15em;
 
   &:hover {
-    color: var(--color-highlight);
-    transition: color 0.3s ease-in;
+    color: var(--color-accent);
   }
 }
 
@@ -225,6 +226,24 @@ header {
   a {
     text-decoration: none;
   }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+
+    // Small accent-coloured square after the name.
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0.25em;
+      height: 0.25em;
+      margin-left: 0.15em;
+      background: var(--color-accent);
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------
@@ -234,6 +253,16 @@ header {
 .home {
   section {
     margin-bottom: var(--spacing-xl);
+  }
+
+  h2 {
+    color: var(--color-dim);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: var(--spacing-s);
+    border-bottom: 0.1rem solid var(--color-vdim);
   }
 }
 
