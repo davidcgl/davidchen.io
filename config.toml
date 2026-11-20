@@ -10,13 +10,12 @@ compile_sass = true
 build_search_index = false
 
 # Generate Atom feeds.
-generate_feed = true
-feed_filename = "atom.xml"
+generate_feeds = true
+feed_filenames = ["atom.xml"]
 
 # Enable syntax highlighting.
-[markdown]
-highlight_code = true
-highlight_theme = "inspired-github"
+[markdown.highlighting]
+theme = "everforest-light"
 
 [extra]
 name = "David Chen"

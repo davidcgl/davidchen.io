@@ -9,15 +9,15 @@
     <email>{{ config.extra.email }}</email>
     <uri>{{ get_url(path="/", trailing_slash=true) | safe }}</uri>
   </author>
-  <updated>{{ last_updated | date(format="%+") }}</updated>
+  <updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
   <link rel="self" href="{{ feed_url | safe }}"/>
   <link rel="alternate" href="{{ get_url(path="/", trailing_slash=true) | safe }}"/>
   {%- for page in pages %}
   <entry xml:lang="{{ page.lang }}">
     <id>{{ page.permalink | safe }}</id>
     <title>{{ page.title }}</title>
-    <published>{{ page.date | date(format="%+") }}</published>
-    <updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
+    <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>
+    <updated>{{ (page.updated or page.date) | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
     <link href="{{ page.permalink | safe }}" type="text/html"/>
     <content type="html">{{ page.content }}</content>
   </entry>
